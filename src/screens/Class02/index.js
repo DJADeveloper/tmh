@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Hero from "./Hero";
 import Trainers from "./Trainers";
-import Community from "../../components/Community";
+
 import Programs from "../../components/Programs";
 import Offer from "../../components/Offer";
 

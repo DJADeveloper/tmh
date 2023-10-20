@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Hero.module.sass";
 import Image from "../../../components/Image";
-import Icon from "../../../components/Icon";
-import Subscription from "../../../components/Subscription";
+
 import Form from "../../../components/Form";
 
 const Hero = () => {

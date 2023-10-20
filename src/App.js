@@ -29,8 +29,6 @@ import SMMService from "./screens/Services/DigitalMarketing/SocialMediaManagemen
 import SMAService from "./screens/Services/DigitalMarketing/SocialMediaAds";
 import SEOService from "./screens/Services/DigitalMarketing/SEO";
 import EmailMarketingService from "./screens/Services/DigitalMarketing/EmailMarketing";
-import SoftwareService from "./screens/Services/Class02Details copy/ServicePage";
-import ServiceComponent from "./screens/Services";
 
 function App() {
   return (

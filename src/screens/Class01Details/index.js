@@ -1,6 +1,5 @@
 import React from "react";
-import Hero from "./Hero";
-import Interesting from "./Interesting";
+
 import servicesData from "../../Data/serivcesData";
 import ServiceComponent from "../Services";
 import { useParams } from "react-router";

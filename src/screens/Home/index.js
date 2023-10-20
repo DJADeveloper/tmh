@@ -10,12 +10,6 @@ import About from "./About";
 
 import Review from "../../components/Review";
 
-import Offer from "../../components/Offer";
-import Catalog from "../Class01/Catalog";
-import Portfolio from "../../components/Portfolio/PortfolioProjects/Portfolio";
-
-// import Portfolio from "../Features/Portfolio";
-
 const Home = () => {
   const scrollToRef = useRef(null);
 

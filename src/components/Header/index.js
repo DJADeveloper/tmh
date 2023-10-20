@@ -5,8 +5,6 @@ import styles from "./Header.module.sass";
 import DropdownMenu from "./DropdownMenu";
 import Icon from "../Icon";
 import Image from "../Image";
-import Theme from "../Theme";
-import services from "../../Data/serivcesData";
 
 const navLinks = [
   {
