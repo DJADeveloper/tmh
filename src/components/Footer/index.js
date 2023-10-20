@@ -8,16 +8,16 @@ import Icon from "../Icon";
 
 const menu = [
   {
-    title: "Blog",
-    url: "/lifestyle",
+    title: "About",
+    url: "/class02",
   },
   {
     title: "Work",
     url: "/class01",
   },
   {
-    title: "About",
-    url: "/class02",
+    title: "Blog",
+    url: "/lifestyle",
   },
 
   {
@@ -69,6 +69,20 @@ const Footer = () => {
                   </span>
                 </div>
               </Link>{" "}
+            </div>
+            <div
+              className={cn(styles.item, {
+                [styles.active]: visible,
+              })}
+            >
+              {/* <Theme className={styles.theme} />{" "} */}
+              {/* <div
+                className={styles.category}
+                onClick={() => setVisible(!visible)}
+              >
+                footer nav
+                <Icon name="arrow-bottom" size="9" />
+              </div> */}
               <div className={styles.menu}>
                 {menu.map((x, index) => (
                   <NavLink
@@ -81,20 +95,6 @@ const Footer = () => {
                     {x.title}
                   </NavLink>
                 ))}
-              </div>
-              <Theme className={styles.theme} />
-            </div>
-            <div
-              className={cn(styles.item, {
-                [styles.active]: visible,
-              })}
-            >
-              <div
-                className={styles.category}
-                onClick={() => setVisible(!visible)}
-              >
-                footer nav
-                <Icon name="arrow-bottom" size="9" />
               </div>
             </div>
           </div>

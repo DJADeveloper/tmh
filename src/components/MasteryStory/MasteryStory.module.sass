@@ -37,17 +37,20 @@
   gap: 20px  // Provides spacing between columns
   .leftColumn
     flex: 1
+
     
    
   p
     margin-bottom: 40px  // Increased from 32px to 40px
     line-height: 2.1
     // Increased from 1.6 to 1.8
-    color: #000
-    strong
-      font-weight: bold
+    color: $neutrals3
+    text-align: center
+    
   @media (max-width: 767px)
-    flex-direction: column  // Stack the columns on mobile
+    flex-direction: column  
+    text-align: center
+    
 
 .services
   margin: 0 -12px

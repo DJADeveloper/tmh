@@ -80,6 +80,7 @@ const Programs = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
       <div className={cn("container", styles.container)}>
         <MasteryStory />
         <div className={styles.wrap}>
+          <h2 className={cn("h2")}>{title}</h2>
           <Slider className={styles.serviceItem} {...settings}>
             {items.map((x, index) => (
               <ScrollParallax className={styles.slide} key={index}>
@@ -92,12 +93,12 @@ const Programs = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
                   </div>
                   <div className={styles.subtitle}>{x.title}</div>
                   <div className={styles.content}>{x.content}</div>
-                  <Link
+                  {/* <Link
                     className={cn("button-stroke", styles.button)}
                     to={x.url}
                   >
                     Learn More
-                  </Link>
+                  </Link> */}
                 </div>
               </ScrollParallax>
             ))}

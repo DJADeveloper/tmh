@@ -6,7 +6,7 @@
     height: auto
     padding-top: 48px
     padding-bottom: 48px
-    
+    // border-bottom: 1px solid $neutrals5
     +m
         padding-bottom: 14px
         
@@ -25,17 +25,20 @@
   
 
 .logoMainText 
-  font-size: 1.5em
-  color: $neutrals4
-  +dark
-    color: $neutrals8
-  
-  
+    font-size: 1.5em
+    color: $neutrals4
+    +dark
+        color: $neutrals8
+    +m
+        font-size: 1.2em // Adjust size as per your requirement for mobile
 
 .logoSubText 
-  font-size: .9em
-  font-weight: 400
-  color: $red
+    font-size: .9em
+    font-weight: 400
+    color: $red
+    +m
+        font-size: .8em // Adjust size as per your requirement for mobile
+
 
 .logo 
     margin-right: 24px

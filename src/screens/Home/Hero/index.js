@@ -31,14 +31,7 @@ const Hero = ({ scrollToRef }) => {
           <h1 className={cn("h1", styles.title)}>
             Welcome to The Mastery House.
           </h1>
-          {isMobile && (
-            <VideoComponent
-              videoSrc={videoFiles}
-              autoplay={false}
-              muted={true}
-              loop={true}
-            />
-          )}
+
           <div className={styles.text}>
             Merging technology and creativity, we embody creative
             problem-solving to craft unique experiences.
