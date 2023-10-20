@@ -3,11 +3,12 @@
 .header
     position: relative
     z-index: 10
- 
     height: auto
+    padding-top: 48px
     
     +m
         padding-bottom: 14px
+        
 
 .container
     display: flex
@@ -16,18 +17,23 @@
         +m
             display: none
 .logo 
-    margin-right: 0
+    margin-right: 24px
     display: flex
     align-items: center  // Centers the logo vertically if the header height is bigger
+   
 
     +d 
         margin-right: auto
     
 
     .pic 
-        width: 100%
-        max-width: 250px // Maximum width the logo can have
-        height: auto // Keeps the aspect ratio
+        
+        width: auto
+        // max-width: 250px // Maximum width the logo can have
+        height: auto
+        max-height: 60px
+        max-width: 180px // Adjust this value as needed
+    
         // or a value that suits your design
      
 

@@ -5,6 +5,7 @@ import styles from "./Header.module.sass";
 import DropdownMenu from "./DropdownMenu";
 import Icon from "../Icon";
 import Image from "../Image";
+import Theme from "../Theme";
 
 const navLinks = [
   {
@@ -173,8 +174,8 @@ const Headers = () => {
         >
           <Image
             className={styles.pic}
-            src="/images/10.svg"
-            srcDark="/images/12.svg"
+            src="/images/tmh-word-logo.png"
+            srcDark="/images/tmh-word-logo-dark.png"
             alt="Fitness Pro"
           />
         </Link>
@@ -238,12 +239,15 @@ const Headers = () => {
             </Link>
           </div>
         </div>
-        <Link
+        {/* <div style={{ marginInline: 15, display: "flex" }}>
+          <Theme />
+        </div> */}
+        {/* <Link
           className={cn("button-stroke button-small", styles.button)}
           to="/"
         >
           Get Started
-        </Link>
+        </Link> */}
         {/* <Link
           className={cn("button-stroke button-small", styles.button)}
           to="/"
@@ -256,9 +260,6 @@ const Headers = () => {
           })}
           onClick={() => setVisibleNav(!visibleNav)}
         ></button>
-        {/* <div style={{ marginInline: 15, display: "flex" }}>
-          <Theme />
-        </div> */}
       </div>
     </header>
   );

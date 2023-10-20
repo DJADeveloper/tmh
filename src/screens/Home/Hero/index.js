@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import styles from "./Hero.module.sass";
@@ -8,11 +8,18 @@ import ScrollButton from "../../../components/ScrollButton";
 import VideoComponent from "../../../components/Video";
 
 const Hero = ({ scrollToRef }) => {
-  // const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming mobile width is 768px or less
 
-  // const mobileOn = () => {
-  //   setIsMobile(true);
-  // };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles.hero}>
@@ -24,14 +31,14 @@ const Hero = ({ scrollToRef }) => {
           <h1 className={cn("h1", styles.title)}>
             Welcome to The Mastery House.
           </h1>
-          {/* {isMobile && ( */}
-          <VideoComponent
-            videoSrc={videoFiles}
-            autoplay={false}
-            muted={true}
-            loop={true}
-          />
-          {/* )} */}
+          {isMobile && (
+            <VideoComponent
+              videoSrc={videoFiles}
+              autoplay={false}
+              muted={true}
+              loop={true}
+            />
+          )}
           <div className={styles.text}>
             Merging technology and creativity, we embody creative
             problem-solving to craft unique experiences.
@@ -60,15 +67,15 @@ const Hero = ({ scrollToRef }) => {
         />
         <div className={styles.gallery}>
           <div className={styles.preview}>
-            {/* {!isMobile && ( */}
-            <VideoComponent
-              videoSrc={videoFiles}
-              height="500px"
-              autoplay={true}
-              muted={true}
-              loop={true}
-            />
-            {/* )} */}
+            {!isMobile && (
+              <VideoComponent
+                videoSrc={videoFiles}
+                height="500px"
+                autoplay={true}
+                muted={true}
+                loop={true}
+              />
+            )}
           </div>
         </div>
       </div>

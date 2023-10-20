@@ -64,8 +64,8 @@ const Footer = () => {
               <Link className={styles.logo} to="/">
                 <Image
                   className={styles.pic}
-                  src="/images/logo-dark.svg"
-                  srcDark="/images/logo-light.svg"
+                  src="/images/tmh-word-logo.png"
+                  srcDark="/images/tmh-word-logo-dark.png"
                   alt="The Mastery House"
                 />
               </Link>
