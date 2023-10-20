@@ -5,7 +5,6 @@ import styles from "./Footer.module.sass";
 import Subscription from "../Subscription";
 import Theme from "../Theme";
 import Icon from "../Icon";
-import Image from "../Image";
 
 const menu = [
   {
@@ -62,13 +61,27 @@ const Footer = () => {
           <div className={styles.col}>
             <div className={styles.box}>
               <Link className={styles.logo} to="/">
-                <Image
-                  className={styles.pic}
-                  src="/images/tmh-word-logo.png"
-                  srcDark="/images/tmh-word-logo-dark.png"
-                  alt="The Mastery House"
-                />
-              </Link>
+                <div className={styles.logoContainer}>
+                  <span className={styles.logoMainText}>The Mastery House</span>
+                  <br />
+                  <span className={styles.logoSubText}>
+                    Creative Digital Agency
+                  </span>
+                </div>
+              </Link>{" "}
+              <div className={styles.menu}>
+                {menu.map((x, index) => (
+                  <NavLink
+                    className={cn(styles.link, {
+                      [styles.active]: pathname === x.url,
+                    })}
+                    to={x.url}
+                    key={index}
+                  >
+                    {x.title}
+                  </NavLink>
+                ))}
+              </div>
               <Theme className={styles.theme} />
             </div>
             <div
@@ -82,19 +95,6 @@ const Footer = () => {
               >
                 footer nav
                 <Icon name="arrow-bottom" size="9" />
-              </div>
-              <div className={styles.menu}>
-                {menu.map((x, index) => (
-                  <NavLink
-                    className={cn(styles.link, {
-                      [styles.active]: pathname === x.url,
-                    })}
-                    to={x.url}
-                    key={index}
-                  >
-                    {x.title}
-                  </NavLink>
-                ))}
               </div>
             </div>
           </div>

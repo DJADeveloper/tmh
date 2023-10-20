@@ -5,6 +5,7 @@
     z-index: 10
     height: auto
     padding-top: 48px
+    padding-bottom: 48px
     
     +m
         padding-bottom: 14px
@@ -16,6 +17,26 @@
     & > .button
         +m
             display: none
+
+.logoContainer 
+  text-align: center
+  margin: 0 10px
+  padding: 0
+  
+
+.logoMainText 
+  font-size: 1.5em
+  color: $neutrals4
+  +dark
+    color: $neutrals8
+  
+  
+
+.logoSubText 
+  font-size: .9em
+  font-weight: 400
+  color: $red
+
 .logo 
     margin-right: 24px
     display: flex
@@ -138,7 +159,7 @@
         padding: 18px 32px 
         font-size: 24px
     &:hover
-        color: $neutrals2
+        color: $red
         +dark
             color: $neutrals8
     &.active
@@ -189,6 +210,7 @@
 .socials
     display: flex
     margin: 0 auto
+    
     +m
         display: none
 
@@ -203,7 +225,7 @@
         fill: $neutrals4
         transition: fill .2s
     &:hover svg
-        fill: $neutrals2
+        fill: $red
         +dark
             fill: $neutrals8
     &:not(:last-child)

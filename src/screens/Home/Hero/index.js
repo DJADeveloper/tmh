@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Hero.module.sass";
 import videoFiles from "../../../assets/videos/TmhVideo.mp4";
 
-import ScrollButton from "../../../components/ScrollButton";
+// import ScrollButton from "../../../components/ScrollButton";
 import VideoComponent from "../../../components/Video";
 
 const Hero = ({ scrollToRef }) => {
@@ -57,14 +57,14 @@ const Hero = ({ scrollToRef }) => {
             </Link> */}
           </div>
         </div>
-        <ScrollButton
+        {/* <ScrollButton
           onScroll={() =>
             scrollToRef.current.scrollIntoView({
               behavior: "smooth",
             })
           }
           className={styles.scroll}
-        />
+        /> */}
         <div className={styles.gallery}>
           <div className={styles.preview}>
             {!isMobile && (

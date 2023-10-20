@@ -4,8 +4,6 @@ import cn from "classnames";
 import styles from "./Header.module.sass";
 import DropdownMenu from "./DropdownMenu";
 import Icon from "../Icon";
-import Image from "../Image";
-import Theme from "../Theme";
 
 const navLinks = [
   {
@@ -172,12 +170,11 @@ const Headers = () => {
           to="/"
           onClick={() => setVisibleNav(false)}
         >
-          <Image
-            className={styles.pic}
-            src="/images/tmh-word-logo.png"
-            srcDark="/images/tmh-word-logo-dark.png"
-            alt="Fitness Pro"
-          />
+          <div className={styles.logoContainer}>
+            <span className={styles.logoMainText}>The Mastery House</span>
+            <br />
+            <span className={styles.logoSubText}>Creative Digital Agency</span>
+          </div>
         </Link>
         <div className={cn(styles.wrap, { [styles.active]: visibleNav })}>
           <nav className={styles.nav}>
@@ -242,12 +239,9 @@ const Headers = () => {
         {/* <div style={{ marginInline: 15, display: "flex" }}>
           <Theme />
         </div> */}
-        {/* <Link
-          className={cn("button-stroke button-small", styles.button)}
-          to="/"
-        >
+        <Link className={cn("button button-small", styles.button)} to="/">
           Get Started
-        </Link> */}
+        </Link>
         {/* <Link
           className={cn("button-stroke button-small", styles.button)}
           to="/"

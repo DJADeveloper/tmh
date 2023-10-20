@@ -29,6 +29,7 @@ import SMMService from "./screens/Services/DigitalMarketing/SocialMediaManagemen
 import SMAService from "./screens/Services/DigitalMarketing/SocialMediaAds";
 import SEOService from "./screens/Services/DigitalMarketing/SEO";
 import EmailMarketingService from "./screens/Services/DigitalMarketing/EmailMarketing";
+import MobibleDevelopmentService from "./screens/Services/SoftwareDevelopment/MobilDevelopment";
 
 function App() {
   return (
@@ -113,11 +114,12 @@ function App() {
           </Page>
         }
       />
+      {/* SERVICES */}
       <Route
         path="/service-frontend"
         element={
           <Page>
-            <FrontendService />
+            <FrontendService service="frontend" />
           </Page>
         }
       />
@@ -125,7 +127,7 @@ function App() {
         path="/service-backend"
         element={
           <Page>
-            <BackendService />
+            <BackendService service="backend" />
           </Page>
         }
       />
@@ -133,7 +135,15 @@ function App() {
         path="/service-ecommerce"
         element={
           <Page>
-            <EcommerceService />
+            <EcommerceService service="ecommerce" />
+          </Page>
+        }
+      />
+      <Route
+        path="/service-mobile"
+        element={
+          <Page>
+            <MobibleDevelopmentService service="mobile" />
           </Page>
         }
       />
@@ -141,7 +151,7 @@ function App() {
         path="/service-cms"
         element={
           <Page>
-            <CMSService />
+            <CMSService service="cms" />
           </Page>
         }
       />
@@ -149,7 +159,7 @@ function App() {
         path="/service-pwa"
         element={
           <Page>
-            <PWAService />
+            <PWAService service="pwa" />
           </Page>
         }
       />
@@ -157,7 +167,7 @@ function App() {
         path="/service-web-maintenance"
         element={
           <Page>
-            <WebMaintenanceService />
+            <WebMaintenanceService service="web-maintenance" />
           </Page>
         }
       />
@@ -165,7 +175,7 @@ function App() {
         path="/service-chatbot"
         element={
           <Page>
-            <ChatBotService />
+            <ChatBotService service="chatbot" />
           </Page>
         }
       />
@@ -173,7 +183,7 @@ function App() {
         path="/service-recommendation-systems"
         element={
           <Page>
-            <RecommendationSystemsService />
+            <RecommendationSystemsService service="recommended" />
           </Page>
         }
       />
@@ -181,7 +191,7 @@ function App() {
         path="/service-machine-learning"
         element={
           <Page>
-            <MachineLearningService />
+            <MachineLearningService service="ml" />
           </Page>
         }
       />
@@ -189,7 +199,7 @@ function App() {
         path="/service-natural-language-processing"
         element={
           <Page>
-            <NLPService />
+            <NLPService service="nlp" />
           </Page>
         }
       />
@@ -197,7 +207,7 @@ function App() {
         path="/service-computer-vision"
         element={
           <Page>
-            <ComputerVisionService />
+            <ComputerVisionService service="computer-vision" />
           </Page>
         }
       />
@@ -205,7 +215,7 @@ function App() {
         path="/service-process-automation"
         element={
           <Page>
-            <ProcessAutomationService />
+            <ProcessAutomationService service="process-automation" />
           </Page>
         }
       />
@@ -213,7 +223,7 @@ function App() {
         path="/service-story-branding"
         element={
           <Page>
-            <StoryBrandingService />
+            <StoryBrandingService service="storybranding" />
           </Page>
         }
       />
@@ -221,7 +231,7 @@ function App() {
         path="/service-content-creation"
         element={
           <Page>
-            <ContentCreationService />
+            <ContentCreationService service="content-creation" />
           </Page>
         }
       />
@@ -229,7 +239,7 @@ function App() {
         path="/service-social-media-marketing"
         element={
           <Page>
-            <SMMService />
+            <SMMService service="social-media-marketing" />
           </Page>
         }
       />
@@ -237,7 +247,7 @@ function App() {
         path="/service-social-media-ads"
         element={
           <Page>
-            <SMAService />
+            <SMAService service="social-ads" />
           </Page>
         }
       />
@@ -245,7 +255,7 @@ function App() {
         path="/service-search-engine-optimization"
         element={
           <Page>
-            <SEOService />
+            <SEOService service="seo" />
           </Page>
         }
       />
@@ -253,7 +263,7 @@ function App() {
         path="/service-email-marketing"
         element={
           <Page>
-            <EmailMarketingService />
+            <EmailMarketingService service="email-marketing" />
           </Page>
         }
       />

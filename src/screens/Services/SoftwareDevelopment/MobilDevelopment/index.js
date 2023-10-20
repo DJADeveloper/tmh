@@ -7,10 +7,10 @@ import data from "../../../../Data/serivcesData";
 import { Link } from "react-router-dom";
 import Interesting from "../../../Class01Details/Interesting";
 
-const MachineLearningService = ({ service }) => {
-  const machineLearningData = data.aiMachineLearningServices[3];
+const MobibleDevelopmentService = ({ service }) => {
+  const MobibleDevelopmentData = data.webDevelopmentServices[5];
   const { title, info, features, benefits, status, items } =
-    machineLearningData;
+    MobibleDevelopmentData;
   const settings = {
     infinite: false,
     speed: 500,
@@ -115,4 +115,4 @@ const MachineLearningService = ({ service }) => {
   );
 };
 
-export default MachineLearningService;
+export default MobibleDevelopmentService;

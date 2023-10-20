@@ -10,7 +10,7 @@ import MasteryStory from "../MasteryStory/masteryStory";
 const items = [
   {
     title: "Software Development",
-    url: "/class02-details",
+    url: "/services",
     color: "#45B26B",
     image: "/images/content/user.svg",
     alt: "user",
@@ -19,7 +19,7 @@ const items = [
   },
   {
     title: "Digital Marketing",
-    url: "/class02-details",
+    url: "/services",
     color: "#9757D7",
     image: "/images/content/medal-1.svg",
     alt: "medal",
@@ -28,7 +28,7 @@ const items = [
   },
   {
     title: "Artificial Intelligence",
-    url: "/class02-details",
+    url: "/services",
     color: "#3772FF",
     image: "/images/content/lightning.svg",
     alt: "lightning",
@@ -80,7 +80,7 @@ const Programs = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
       <div className={cn("container", styles.container)}>
         <MasteryStory />
         <div className={styles.wrap}>
-          <Slider className="services-slider" {...settings}>
+          <Slider className={styles.serviceItem} {...settings}>
             {items.map((x, index) => (
               <ScrollParallax className={styles.slide} key={index}>
                 <div className={cn("service-item", styles.item)}>

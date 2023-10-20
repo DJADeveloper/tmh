@@ -1,23 +1,23 @@
 import React from "react";
+import styles from "./Video.module.sass"; // Adjust the path if needed
 
 const VideoComponent = ({
   videoSrc,
   videoTitle,
-  width = "100%",
-  height = "auto",
-  autoplay = false,
-  muted = false,
-  loop = false,
+  poster,
+  autoplay = true,
+  muted = true,
+  loop = true,
   ...props
 }) => (
-  <div className="video-container" style={{ maxWidth: width }}>
+  <div className={styles.videoContainer}>
     <video
       controls
       autoPlay={autoplay}
       muted={muted}
       loop={loop}
-      width={width}
-      height={height}
+      playsInline
+      poster={poster}
       {...props}
     >
       <source src={videoSrc} type="video/mp4" />

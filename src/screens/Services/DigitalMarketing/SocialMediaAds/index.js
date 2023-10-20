@@ -4,10 +4,11 @@ import Slider from "react-slick";
 import styles from "../../Services.module.sass";
 import Icon from "../../../../components/Icon";
 import data from "../../../../Data/serivcesData";
+import { Link } from "react-router-dom";
 import Interesting from "../../../Class01Details/Interesting";
 
-const SMAService = () => {
-  const sMAData = data.digitalMarketingServices[0];
+const SMAService = ({ service }) => {
+  const sMAData = data.digitalMarketingServices[3];
   const { title, info, features, benefits, status, items } = sMAData;
   const settings = {
     infinite: false,
@@ -20,22 +21,9 @@ const SMAService = () => {
 
   const photos = [
     {
-      image: "/images/content/workout-pic.png",
-      image2x: "/images/content/workout-pic@2x.png",
-      play: true,
-    },
-    {
-      image: "/images/content/workout-pic.png",
-      image2x: "/images/content/workout-pic@2x.png",
-    },
-    {
-      image: "/images/content/workout-pic.png",
-      image2x: "/images/content/workout-pic@2x.png",
-      play: true,
-    },
-    {
-      image: "/images/content/workout-pic.png",
-      image2x: "/images/content/workout-pic@2x.png",
+      image: `/images/content/services/${service}.png`,
+      image2x: `/images/content/services/${service}.png`,
+      play: false,
     },
   ];
 
@@ -114,9 +102,9 @@ const SMAService = () => {
               <button className={cn("button-circle-stroke", styles.button)}>
                 <Icon name="lock" size="22" />
               </button>
-              <button className={cn("button", styles.button)}>
-                Start my free trial
-              </button>
+              <Link to="/contact" className={cn("button", styles.button)}>
+                Let's Get Started
+              </Link>
             </div>
           </div>
         </div>

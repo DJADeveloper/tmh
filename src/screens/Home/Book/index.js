@@ -5,7 +5,7 @@ import styles from "./Book.module.sass";
 import Icon from "../../../components/Icon";
 import Image from "../../../components/Image";
 import ScrollParallax from "../../../components/ScrollParallax";
-import techMeeting from "../../../assets/images/3DTech/8. Online Meeting.png";
+import techMeeting from "../../../assets/images/3DTech/4. Man With Calendar.png";
 
 const items = [
   {

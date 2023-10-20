@@ -4,6 +4,7 @@ import styles from "./Catalog.module.sass";
 import Icon from "../../../components/Icon";
 import Card from "../../../components/Card";
 import Dropdown from "../../../components/Dropdown";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   "Software Development",
@@ -406,10 +407,13 @@ const Catalog = () => {
           ))}
         </div>
         <div className={styles.btns}>
-          <button className={cn("button-stroke", styles.button)}>
+          <Link to="/contact" className={cn("button-stroke", styles.button)}>
+            <span>Find Your Solution</span>
+          </Link>
+          {/* <button className={cn("button-stroke", styles.button)}>
             <span>Discover more</span>
             <Icon name="arrow-bottom" size="8" />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
