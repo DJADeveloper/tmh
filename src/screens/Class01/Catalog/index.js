@@ -5,8 +5,6 @@ import Icon from "../../../components/Icon";
 import Card from "../../../components/Card";
 import Dropdown from "../../../components/Dropdown";
 
-import { Link } from "react-router-dom";
-
 const navLinks = [
   "Software Development",
   "Digital Marketing",

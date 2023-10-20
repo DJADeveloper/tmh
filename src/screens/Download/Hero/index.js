@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import cn from "classnames";
 import styles from "./Hero.module.sass";
 import Image from "../../../components/Image";

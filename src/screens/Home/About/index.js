@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./About.module.sass";
-import Icon from "../../../components/Icon";
+
 import ScrollParallax from "../../../components/ScrollParallax";
 import tech from "../../../assets/images/3DTech/5. Growth Progress.png";
 

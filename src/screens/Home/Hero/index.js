@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import styles from "./Hero.module.sass";
 import videoFiles from "../../../assets/videos/TmhVideo.mp4";
 
-import Image from "../../../components/Image";
 import ScrollButton from "../../../components/ScrollButton";
 import VideoComponent from "../../../components/Video";
 
 const Hero = ({ scrollToRef }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
+
+  // const mobileOn = () => {
+  //   setIsMobile(true);
+  // };
+
   return (
     <div className={styles.hero}>
       <div className={cn("container", styles.container)}>
@@ -20,14 +24,14 @@ const Hero = ({ scrollToRef }) => {
           <h1 className={cn("h1", styles.title)}>
             Welcome to The Mastery House.
           </h1>
-          {isMobile && (
-            <VideoComponent
-              videoSrc={videoFiles}
-              autoplay={false}
-              muted={true}
-              loop={true}
-            />
-          )}
+          {/* {isMobile && ( */}
+          <VideoComponent
+            videoSrc={videoFiles}
+            autoplay={false}
+            muted={true}
+            loop={true}
+          />
+          {/* )} */}
           <div className={styles.text}>
             Merging technology and creativity, we embody creative
             problem-solving to craft unique experiences.
@@ -56,15 +60,15 @@ const Hero = ({ scrollToRef }) => {
         />
         <div className={styles.gallery}>
           <div className={styles.preview}>
-            {!isMobile && (
-              <VideoComponent
-                videoSrc={videoFiles}
-                height="500px"
-                autoplay={true}
-                muted={true}
-                loop={true}
-              />
-            )}
+            {/* {!isMobile && ( */}
+            <VideoComponent
+              videoSrc={videoFiles}
+              height="500px"
+              autoplay={true}
+              muted={true}
+              loop={true}
+            />
+            {/* )} */}
           </div>
         </div>
       </div>
