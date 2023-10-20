@@ -1,0 +1,34 @@
+.video-container
+  position: relative
+  padding-bottom: 100%  // Adjusted for square videos
+  overflow: hidden
+  max-width: 480px
+  margin: 20px 0  // Adds a little space around the video container
+
+  video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: 50%  // Makes the video round
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)  // Adds a subtle shadow for depth
+    
+    // Attempt to style controls. Note: Not all browsers will honor these styles
+    controlsList: "nodownload"  // Hide the download button in some browsers
+    outline: none  // Removes focus border
+    background-color: #000  // Ensures a black background if video doesn't fill container
+
+    // This is for video loader or spinner
+    &::-webkit-media-controls-enclosure
+      overflow:hidden
+      border-radius:50%
+
+    &::-webkit-media-controls-panel
+      background-color: rgba(0,0,0,0.4) !important  // Semi-transparent background
+      border-radius: 50% !important  // Round corners
+      color: white  // Icons color
+
+    // This is to remove the top white line on the seek bar
+    &::-webkit-media-controls-timeline
+      display: none

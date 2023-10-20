@@ -1,0 +1,87 @@
+@import "../../styles/helpers"
+
+.container
+  position: relative
+  padding: 64px 0
+  text-align: left
+  @media (max-width: 767px)
+    padding: 40px 15px  // Added horizontal padding
+
+.header
+  max-width: 620px
+  margin: 0 auto 40px
+  text-align: center
+  display: flex        // Added
+  justify-content: center  // Added
+  align-items: center  // Added
+  flex-direction: column   // Added
+
+  h1
+    font-weight: bold
+    margin-bottom: 20px
+  p
+    font-style: italic
+    margin-bottom: 10%
+  img
+    max-width: 100% 
+    width: 325px
+    height: auto// Maintains the aspect ratio of the image
+    display: block // Removes any spacing underneath the image
+    margin-bottom: 10%
+
+.story
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  max-width: 1200px
+  gap: 20px  // Provides spacing between columns
+  .leftColumn
+    flex: 1
+    
+   
+  p
+    margin-bottom: 40px  // Increased from 32px to 40px
+    line-height: 2.1
+    // Increased from 1.6 to 1.8
+    color: #000
+    strong
+      font-weight: bold
+  @media (max-width: 767px)
+    flex-direction: column  // Stack the columns on mobile
+
+.services
+  margin: 0 -12px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.serviceGrid
+  display: flex
+  flex-wrap: wrap
+  gap: 24px
+
+.serviceItem
+  height: 100%
+  padding: 64px 32px
+  background: $neutrals7
+  border-radius: 20px
+  transition: all .2s
+  @media (max-width: 1024px)
+    padding: 48px 24px
+  @media (max-width: 767px)
+    padding: 40px 20px  // Adjusted padding for mobile
+
+.icon
+  margin-bottom: 24px
+  border-radius: 50%
+
+.button
+  margin-top: auto
+  padding: 12px 24px
+  border: none
+  border-radius: 8px
+  background-color: $green
+  color: $neutrals8
+  transition: background-color .2s
+  &:hover
+    background-color: darken($green, 10%)
