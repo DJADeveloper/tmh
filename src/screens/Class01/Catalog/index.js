@@ -311,18 +311,10 @@ const items = [
 ];
 
 const dateOptions = navLinks;
-const sportOptions = ["AcroYoga", "Morning Yoga"];
-const timeOptions = ["Morning", "Dinner", "Evening"];
-const difficultyOptions = ["Beginner", "Advanced", "Intermediate"];
-const levelOptions = ["Level", "Level 1", "Level 2"];
 
 const Catalog = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [date, setDate] = useState(dateOptions[0]);
-  const [sport, setSport] = useState(sportOptions[0]);
-  const [time, setTime] = useState(timeOptions[0]);
-  const [difficulty, setDifficulty] = useState(difficultyOptions[0]);
-  const [level, setLevel] = useState(levelOptions[0]);
 
   const [search, setSearch] = useState("");
 
@@ -334,18 +326,18 @@ const Catalog = () => {
     return items.filter((item) => item.categoryText === category);
   };
 
-  const renderServiceItems = () => {
-    return filterItemsByService().map((item) => (
-      <Link to={item.url} key={item.title}>
-        <Card
-          className={styles.card}
-          item={item}
+  // const renderServiceItems = () => {
+  //   return filterItemsByService().map((item) => (
+  //     <Link to={item.url} key={item.title}>
+  //       <Card
+  //         className={styles.card}
+  //         item={item}
 
-          // ... (and other relevant props you want to pass to the Card component)
-        />
-      </Link>
-    ));
-  };
+  //         // ... (and other relevant props you want to pass to the Card component)
+  //       />
+  //     </Link>
+  //   ));
+  // };
 
   return (
     <div className={cn("section-pb", styles.section)}>

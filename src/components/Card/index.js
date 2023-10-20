@@ -36,7 +36,7 @@ const Card = ({ className, item }) => {
             </button>
           )}
         </div>
-        {/* Add the description here */}
+
         <div className={styles.description}>{item.description}</div>
 
         <div className={styles.head}>

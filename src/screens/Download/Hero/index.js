@@ -6,15 +6,6 @@ import Image from "../../../components/Image";
 import Form from "../../../components/Form";
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle the form submission here, e.g., send the data to a server or API.
-    alert(`Email: ${email}\nMessage: ${message}`);
-  };
-
   return (
     <div className={styles.hero}>
       <div className={cn("container", styles.container)}>
