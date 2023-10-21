@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MasteryStory.module.sass";
-import logo from "../../assets/images/logo/tmh-transparent-logo.png";
+// import logo from "../../assets/images/logo/tmh-transparent-logo.png";
 import Community from "../Community";
 
 const MasteryStory = () => {

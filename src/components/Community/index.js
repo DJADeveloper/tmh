@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Community.module.sass";
-import Subscription from "../Subscription";
+
 import logo from "../../assets/images/logo/2.png";
 import Image from "../Image";
 
@@ -12,7 +12,7 @@ const Community = ({
   imageDark2xUrl = { logo },
   imageAlt = "Mastery House Logo",
   stageText = "Who We Are",
-  title = "The Story Behind The Mastery House",
+  title = "The Mastery House Story",
   description = "Founded in 2019,The Mastery House began with a vision: harnessing the transformative power of technology for businesses. Beyond tasks and projects, we see the dreams and ambitions of our clients. Through our dedication, we light up the digital landscape, helping dreams turn into grand visions.",
   subscriptionPlaceholder = "Enter your email",
   termsLink = "/#",

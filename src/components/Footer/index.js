@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
 import Subscription from "../Subscription";
-import Theme from "../Theme";
+
 import Icon from "../Icon";
 
 const menu = [
@@ -50,7 +50,8 @@ const socials = [
 ];
 
 const Footer = () => {
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
+  const visible = true;
 
   const { pathname } = useLocation();
 
