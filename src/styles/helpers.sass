@@ -1,3 +1,4 @@
+@use 'sass:math'
 // media queries
 =w
   @media only screen and (max-width: "1419px")
@@ -52,21 +53,20 @@ $neutrals8:#FCFCFC
 // typography
 =body-1
   font-size: 24px
-  line-height: (32/24)
+   line-height: math.div(32, 24) // or calc(32 / 24)
   letter-spacing: -.01em
 
 =body-2
   font-size: 24px
-  line-height: (32/24)
+   line-height: math.div(32, 24) // or calc(32 / 24)
   font-weight: 600
 
 =caption-1
-  font-size: 14px
-  line-height: (24/14)
+ line-height: math.div(24, 14) // or calc(32 / 24)
 
 =caption-2
   font-size: 12px
-  line-height: (20/12)
+  line-height: math.div(20, 12) // or calc(32 / 24)
 
 =hairline-1
   line-height: 1
@@ -88,7 +88,7 @@ $neutrals8:#FCFCFC
 =button-2
   +sf-pro-display
   font-size: 14px
-  line-height: (16/14)
+   line-height: math.div(16, 14) // or calc(32 / 24)
   font-weight: 700
   
 //triangle
@@ -97,16 +97,16 @@ $neutrals8:#FCFCFC
   height: 0px
   border-style: solid
   @if $direction == t
-    border-width: 0 $width / 2 + px $height + px $width / 2 + px
+    border-width: 0 math.div($width, 2) + px $height + px math.div($width, 2) + px
     border-color: transparent transparent $bg transparent
   @if $direction == r
-    border-width: $height / 2 + px 0 $height / 2 + px $width + px
+    border-width: math.div($height, 2) + px 0 math.div($height, 2) + px $width + px
     border-color: transparent transparent transparent $bg
   @if $direction == b
-    border-width: $height + px $width / 2 + px 0 $width / 2 + px
+    border-width: $height + px math.div($width, 2) + px 0 math.div($width, 2) + px
     border-color: $bg transparent transparent transparent
   @if $direction == l
-    border-width: $height / 2 + px $width + px $height / 2 + px 0
+    border-width: math.div($height, 2) + px $width + px math.div($height, 2) + px 0
     border-color: transparent $bg transparent transparent
   @if $direction == tl
     border-width: $height + px $width + px 0 0
@@ -120,6 +120,7 @@ $neutrals8:#FCFCFC
   @if $direction == bl
     border-width: $width + px 0 0 $height + px
     border-color: transparent transparent transparent $bg
+
 // example
 // +arr(500,50, #000, l)
 // +arr(500,50, #000, bl)
