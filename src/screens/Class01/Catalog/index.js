@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Catalog.module.sass";
-import Icon from "../../../components/Icon";
+
 import Card from "../../../components/Card";
 import Dropdown from "../../../components/Dropdown";
 import { Link } from "react-router-dom";
@@ -315,15 +315,16 @@ const Catalog = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [date, setDate] = useState(dateOptions[0]);
 
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
 
-  const handleSubmit = (e) => {
-    alert();
-  };
   const filterItemsByService = () => {
     const category = navLinks[activeIndex];
     return items.filter((item) => item.categoryText === category);
   };
+  // const filterItemsByServiceDropDown = () => {
+  //   const category = dateOptions[activeIndex];
+  //   return items.filter((item) => item.categoryText === category);
+  // };
 
   // const renderServiceItems = () => {
   //   return filterItemsByService().map((item) => (
@@ -345,7 +346,8 @@ const Catalog = () => {
           <div className={styles.title}>
             Find a service that fits your needs
           </div>
-          <form
+          {/* Search Item */}
+          {/* <form
             className={styles.search}
             action=""
             onSubmit={() => handleSubmit()}
@@ -362,7 +364,7 @@ const Catalog = () => {
             <button className={styles.result}>
               <Icon name="search" size="16" />
             </button>
-          </form>
+          </form> */}
         </div>
 
         <div className={styles.wrap}>

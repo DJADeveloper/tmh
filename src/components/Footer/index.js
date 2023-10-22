@@ -70,32 +70,32 @@ const Footer = () => {
                   </span>
                 </div>
               </Link>{" "}
-            </div>
-            <div
-              className={cn(styles.item, {
-                [styles.active]: visible,
-              })}
-            >
-              {/* <Theme className={styles.theme} />{" "} */}
-              {/* <div
+              <div
+                className={cn(styles.item, {
+                  [styles.active]: visible,
+                })}
+              >
+                {/* <Theme className={styles.theme} />{" "} */}
+                {/* <div
                 className={styles.category}
                 onClick={() => setVisible(!visible)}
               >
                 footer nav
                 <Icon name="arrow-bottom" size="9" />
               </div> */}
-              <div className={styles.menu}>
-                {menu.map((x, index) => (
-                  <NavLink
-                    className={cn(styles.link, {
-                      [styles.active]: pathname === x.url,
-                    })}
-                    to={x.url}
-                    key={index}
-                  >
-                    {x.title}
-                  </NavLink>
-                ))}
+                <div className={styles.menu}>
+                  {menu.map((x, index) => (
+                    <NavLink
+                      className={cn(styles.link, {
+                        [styles.active]: pathname === x.url,
+                      })}
+                      to={x.url}
+                      key={index}
+                    >
+                      {x.title}
+                    </NavLink>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

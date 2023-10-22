@@ -51,7 +51,7 @@ const items = [
 const ProjectLead = ({ status, name, position, avatar, items, note }) => {
   return (
     <div className={styles.wrap}>
-      <div className={cn("status-green", styles.status)}>{status}</div>
+      <div className={cn("status-red", styles.status)}>{status}</div>
       <div className={styles.card}>
         <img src={avatar} alt={name} className={styles.avatar} />
       </div>
@@ -203,7 +203,7 @@ const Hero = () => {
     <div className={cn("section-pb", styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.top}>
-          <div className={cn("status-green", styles.status)}>
+          <div className={cn("status-red", styles.status)}>
             exclusive software project
           </div>
           <h1 className={cn("h1", styles.title)}>CREATIVE DIGITAL PORTFOLIO</h1>

@@ -9,19 +9,19 @@ const items = [
     title: "Software Development",
     content:
       "Crafting tailored software solutions to drive business outcomes and enhance user experience.",
-    color: "#9757D7",
+    color: "#FF708A", // Lighter than #EF466F
   },
   {
     title: "Digital Marketing",
     content:
       "Strategic online marketing campaigns to boost your brand's visibility and engagement.",
-    color: "#EF466F",
+    color: "#EF466F", // Original reddish color
   },
   {
     title: "AI",
     content:
       "Leveraging the power of machine learning and AI to build intelligent and efficient systems.",
-    color: "#45B26B",
+    color: "#D1365B", // Darker than #EF466F
   },
 ];
 
@@ -38,7 +38,8 @@ const About = () => {
               Innovative, Dynamic, <br></br>Future-Ready
             </h2>
             <div className={styles.info}>
-              Offering a diverse range of services to cater to your business needs. Let's transform the digital landscape together.
+              Offering a diverse range of services to cater to your business
+              needs. Let's transform the digital landscape together.
             </div>
           </div>
         </div>

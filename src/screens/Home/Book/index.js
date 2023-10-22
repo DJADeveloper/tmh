@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import cn from "classnames";
-import { Link } from "react-router-dom";
+
 import styles from "./Book.module.sass";
 import Icon from "../../../components/Icon";
 import Image from "../../../components/Image";
@@ -39,25 +39,32 @@ const Book = () => {
     script1.async = true;
     document.body.appendChild(script1);
 
-    const script2 = document.createElement("script");
-    script2.textContent = `
-      window.onload = function() {
-        Calendly.initBadgeWidget({ 
-          url: 'https://calendly.com/themasteryhouse', 
-          text: 'Book a Call', 
-          color: '#ffa200', 
-          textColor: '#ffffff', 
-          branding: true 
-        });
-      };
-    `;
-    document.body.appendChild(script2);
+    // const script2 = document.createElement("script");
+    // script2.textContent = `
+    //   window.onload = function() {
+    //     Calendly.initBadgeWidget({
+    //       url: 'https://calendly.com/themasteryhouse',
+    //       text: 'Book a Call',
+    //       color: '',
+    //       textColor: '#FF4757',
+    //       branding: true
+    //     });
+    //   };
+    // `;
+    // document.body.appendChild(script2);
 
     return () => {
       document.body.removeChild(script1);
-      document.body.removeChild(script2);
+      // document.body.removeChild(script2);
     };
   }, []);
+
+  const handleOpenCalendly = () => {
+    // Open Calendly widget
+    if (window.Calendly) {
+      window.Calendly.showPopupWidget("https://calendly.com/themasteryhouse");
+    }
+  };
   return (
     <div className={cn("section-bg", styles.section)}>
       <div className={cn("container", styles.container)}>
@@ -128,15 +135,19 @@ const Book = () => {
             ))}
           </div>
           <div className={styles.note}>
-            <strong className={styles.green}>Lets Talk</strong> about how{" "}
-            <strong className={styles.black}>The Mastery House</strong> can help
+            <strong className={styles.red}>Lets Talk</strong> about how The
+            Mastery House
+            <strong className={styles.black}>can help</strong>
             you.
           </div>
           <div className={styles.btns}>
-            <Link className={cn("button", styles.button)} to="/call-details">
+            <div
+              className={cn("button", styles.button)}
+              onClick={handleOpenCalendly}
+            >
               <span>Book a Call</span>
               <Icon name="arrow-right" size="10" />
-            </Link>
+            </div>
           </div>
         </div>
       </div>

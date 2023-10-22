@@ -239,8 +239,11 @@ const Headers = () => {
         {/* <div style={{ marginInline: 15, display: "flex" }}>
           <Theme />
         </div> */}
-        <Link className={cn("button button-small", styles.button)} to="/">
-          Get Started
+        <Link
+          className={cn("button button-small", styles.button)}
+          to="/contact"
+        >
+          Let's Talk
         </Link>
         {/* <Link
           className={cn("button-stroke button-small", styles.button)}

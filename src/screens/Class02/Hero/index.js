@@ -8,6 +8,7 @@ import ScrollParallax from "../../../components/ScrollParallax";
 import techTeam from "../../../assets/images/3DTech/10. Team Discussion.png";
 
 const Hero = ({ scrollToRef }) => {
+  const isMobile = window.innerWidth <= 768;
   return (
     <div className={styles.hero}>
       <div className={cn("container", styles.container)}>
@@ -24,6 +25,46 @@ const Hero = ({ scrollToRef }) => {
             making a positive impact. A portion of our proceeds goes towards
             supporting autistic organizations.
           </div>
+          {isMobile && (
+            <div className={styles.gallery}>
+              <div className={styles.preview}>
+                <Image
+                  srcSet={techTeam}
+                  srcSetDark={techTeam}
+                  src={techTeam}
+                  srcDark={techTeam}
+                  alt="Digital Transformation"
+                />
+              </div>
+              <ScrollParallax
+                className={styles.preview}
+                animateIn="fadeInUp"
+                delay={300}
+              >
+                <img
+                  srcSet="/images/tech/21 Internet.png"
+                  src="/images/tech/21 Internet.png"
+                  alt="Ball"
+                />
+              </ScrollParallax>
+              <ScrollParallax
+                className={styles.preview}
+                animateIn="fadeInUp"
+                delay={600}
+              >
+                <img
+                  srcSet="/images/tech/25 Blockchain.png"
+                  src="/images/tech/11 Artificial Intelliegence.png"
+                  alt="Dumbbells"
+                />
+              </ScrollParallax>
+              <ScrollParallax
+                className={styles.preview}
+                animateIn="fadeInUp"
+                delay={900}
+              ></ScrollParallax>
+            </div>
+          )}
           <Link className={cn("button", styles.button)} to="/services">
             Explore Our Services
           </Link>
@@ -34,44 +75,46 @@ const Hero = ({ scrollToRef }) => {
           }
           className={styles.scroll}
         />
-        <div className={styles.gallery}>
-          <div className={styles.preview}>
-            <Image
-              srcSet={techTeam}
-              srcSetDark={techTeam}
-              src={techTeam}
-              srcDark={techTeam}
-              alt="Digital Transformation"
-            />
+        {!isMobile && (
+          <div className={styles.gallery}>
+            <div className={styles.preview}>
+              <Image
+                srcSet={techTeam}
+                srcSetDark={techTeam}
+                src={techTeam}
+                srcDark={techTeam}
+                alt="Digital Transformation"
+              />
+            </div>
+            <ScrollParallax
+              className={styles.preview}
+              animateIn="fadeInUp"
+              delay={300}
+            >
+              <img
+                srcSet="/images/tech/21 Internet.png"
+                src="/images/tech/21 Internet.png"
+                alt="Ball"
+              />
+            </ScrollParallax>
+            <ScrollParallax
+              className={styles.preview}
+              animateIn="fadeInUp"
+              delay={600}
+            >
+              <img
+                srcSet="/images/tech/25 Blockchain.png"
+                src="/images/tech/11 Artificial Intelliegence.png"
+                alt="Dumbbells"
+              />
+            </ScrollParallax>
+            <ScrollParallax
+              className={styles.preview}
+              animateIn="fadeInUp"
+              delay={900}
+            ></ScrollParallax>
           </div>
-          <ScrollParallax
-            className={styles.preview}
-            animateIn="fadeInUp"
-            delay={300}
-          >
-            <img
-              srcSet="/images/tech/21 Internet.png"
-              src="/images/tech/21 Internet.png"
-              alt="Ball"
-            />
-          </ScrollParallax>
-          <ScrollParallax
-            className={styles.preview}
-            animateIn="fadeInUp"
-            delay={600}
-          >
-            <img
-              srcSet="/images/tech/25 Blockchain.png"
-              src="/images/tech/11 Artificial Intelliegence.png"
-              alt="Dumbbells"
-            />
-          </ScrollParallax>
-          <ScrollParallax
-            className={styles.preview}
-            animateIn="fadeInUp"
-            delay={900}
-          ></ScrollParallax>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -10,9 +10,9 @@ const Card = ({ className, item }) => {
     <ScrollParallax className={cn(styles.card, className)}>
       <div
         className={cn(
-          { "status-stroke-green": item.level === "green" },
+          { "status-stroke-red": item.level === "green" },
           { "status-stroke-red": item.level === "red" },
-          { "status-stroke-purple": item.level === "purple" },
+          { "status-stroke-red": item.level === "purple" },
           styles.level
         )}
       >

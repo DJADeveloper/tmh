@@ -30,8 +30,15 @@ import SMAService from "./screens/Services/DigitalMarketing/SocialMediaAds";
 import SEOService from "./screens/Services/DigitalMarketing/SEO";
 import EmailMarketingService from "./screens/Services/DigitalMarketing/EmailMarketing";
 import MobibleDevelopmentService from "./screens/Services/SoftwareDevelopment/MobilDevelopment";
+import { useEffect } from "react";
+import initTawkTo from "./components/Chatbot/tawkto";
 
 function App() {
+  // Chatbot
+  useEffect(() => {
+    initTawkTo();
+  }, []);
+
   return (
     <Routes>
       <Route
