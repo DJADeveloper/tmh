@@ -283,6 +283,57 @@ const servicesData = {
         },
       ],
     },
+    // Mobile Development - 6
+    {
+      id: "mobile-development",
+      title: "Mobile Development",
+      info: "Creating seamless and intuitive mobile applications that offer the best user experience.",
+      features: [
+        "Native Development",
+        "Cross-Platform Apps",
+        "Mobile UI/UX Design",
+      ],
+      benefits: {
+        title: "Mobile Development: Seamless Experiences on Every Device",
+        content:
+          "Crafting mobile applications that keep your users engaged and offer a consistent experience across all devices.",
+      },
+
+      status: [
+        {
+          status: "green",
+          statusContent: "iOS",
+        },
+        {
+          status: "grey",
+          statusContent: "Android",
+        },
+        {
+          status: "blue",
+          statusContent: "Cross-Platform",
+        },
+      ],
+      items: [
+        {
+          title: "Native Development",
+          content: "Swift, Kotlin & Java Development",
+          icon: "mobile",
+          size: "16",
+        },
+        {
+          title: "Cross-Platform",
+          content: "React Native, Flutter",
+          icon: "crossplatform",
+          size: "16",
+        },
+        {
+          title: "UI/UX Design",
+          content: "User-Centered Design Principles",
+          icon: "design",
+          size: "20",
+        },
+      ],
+    },
   ],
   //  Artificial Intelligence Data
   aiMachineLearningServices: [

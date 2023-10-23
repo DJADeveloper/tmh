@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import Interesting from "../../../Class01Details/Interesting";
 
 const MobibleDevelopmentService = ({ service }) => {
-  const MobibleDevelopmentData = data.webDevelopmentServices[5];
+  const MobibleDevelopmentData = data.webDevelopmentServices[6];
   const { title, info, features, benefits, status, items } =
     MobibleDevelopmentData;
   const settings = {
@@ -100,9 +100,9 @@ const MobibleDevelopmentService = ({ service }) => {
               ))}
             </div>
             <div className={styles.btns}>
-              <button className={cn("button-circle-stroke", styles.button)}>
+              {/* <button className={cn("button-circle-stroke", styles.button)}>
                 <Icon name="lock" size="22" />
-              </button>
+              </button> */}
               <Link to="/contact" className={cn("button", styles.button)}>
                 Let's Get Started
               </Link>
