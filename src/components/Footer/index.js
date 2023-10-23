@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
 import Subscription from "../Subscription";
+import Theme from "../Theme/index";
 
 import Icon from "../Icon";
 
@@ -75,7 +76,7 @@ const Footer = () => {
                   [styles.active]: visible,
                 })}
               >
-                {/* <Theme className={styles.theme} />{" "} */}
+                <Theme className={styles.theme} />{" "}
                 {/* <div
                 className={styles.category}
                 onClick={() => setVisible(!visible)}
