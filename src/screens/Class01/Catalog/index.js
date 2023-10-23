@@ -312,12 +312,18 @@ const items = [
 const dateOptions = navLinks;
 
 const Catalog = () => {
+  const isMobile = window.innerWidth <= 768;
   const [activeIndex, setActiveIndex] = useState(0);
   const [date, setDate] = useState(dateOptions[0]);
 
   // const [search, setSearch] = useState("");
 
   const filterItemsByService = () => {
+    console.log(activeIndex);
+    const category = navLinks[activeIndex];
+    return items.filter((item) => item.categoryText === category);
+  };
+  const filterItemsByServiceDropdown = () => {
     console.log(activeIndex);
     // const category = navLinks[activeIndex];
     return items.filter((item) => item.categoryText === date);
@@ -406,9 +412,13 @@ const Catalog = () => {
         </div>
         <div className={styles.list}>
           {" "}
-          {filterItemsByService().map((x, index) => (
-            <Card className={styles.card} item={x} key={index} />
-          ))}
+          {isMobile
+            ? filterItemsByServiceDropdown().map((x, index) => (
+                <Card className={styles.card} item={x} key={index} />
+              ))
+            : filterItemsByService().map((x, index) => (
+                <Card className={styles.card} item={x} key={index} />
+              ))}
         </div>
         <div className={styles.btns}>
           <Link to="/contact" className={cn("button-stroke", styles.button)}>
