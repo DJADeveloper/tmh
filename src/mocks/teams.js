@@ -52,19 +52,19 @@ const courses = [
 const socials = [
   {
     type: "facebook",
-    url: "https://facebook.com",
+    url: "https://facebook.com/themasteryhouse",
   },
   {
     type: "instagram",
-    url: "https://instagram.com",
+    url: "https://instagram.com/themasteryhouse",
   },
   {
     type: "twitter",
-    url: "https://twitter.com",
+    url: "https://twitter.com/themasteryh",
   },
   {
     type: "linkedin",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/the-mastery-house-727664204/",
   },
 ];
 

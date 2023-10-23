@@ -9,15 +9,15 @@ import Icon from "../Icon";
 const menu = [
   {
     title: "About",
-    url: "/class02",
+    url: "/about",
   },
   {
     title: "Work",
-    url: "/class01",
+    url: "/work",
   },
   {
-    title: "Blog",
-    url: "/lifestyle",
+    title: "Services",
+    url: "/services",
   },
 
   {

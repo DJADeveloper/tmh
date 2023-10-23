@@ -59,6 +59,21 @@ const Book = () => {
     };
   }, []);
 
+  // useEffect(() => {
+  //   const script1 = document.createElement("script");
+  //   script1.src = "https://assets.calendly.com/assets/external/widget.js";
+  //   script1.async = true;
+  //   document.body.appendChild(script1);
+
+  //   // Return cleanup function
+  //   return () => {
+  //     // Remove script if it's appended
+  //     if (document.body.contains(script1)) {
+  //       document.body.removeChild(script1);
+  //     }
+  //   };
+  // }, []);
+
   const handleOpenCalendly = () => {
     // Open Calendly widget
     if (window.Calendly) {

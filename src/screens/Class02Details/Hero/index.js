@@ -1,6 +1,10 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Hero.module.sass";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // import Icon from "../../../components/Icon";
 // import Image from "../../../components/Image";
 // import ScrollParallax from "../../../components/ScrollParallax";
@@ -78,6 +82,8 @@ const ProjectLead = ({ status, name, position, avatar, items, note }) => {
 };
 
 const Hero = () => {
+  const isMobile = window.innerWidth <= 768;
+  // Rendering On Desktop
   const projects = {
     row1: [
       {
@@ -197,7 +203,109 @@ const Hero = () => {
     ],
   };
 
-  // You can add more project objects here as needed
+  // Rendering on Mobile
+  const allProjects = [
+    {
+      status: "NextNova (Marketing Agency)",
+      name: "Dariana Hammes",
+      position: "Lead Developer",
+      avatar: work11,
+      items: items,
+      note: "A comprehensive software solution tailored to your needs, ",
+    },
+    {
+      status: "TwoFi Exchange (NF)",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work15,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "French Chateau Getaways ",
+      name: "Dariana Hammes",
+      position: "Lead Developer",
+      avatar: work1,
+      items: items,
+      note: "A comprehensive software solution tailored to your needs, ",
+    },
+    {
+      status: "Northwood Manor (ALF)",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work4,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "Kind of a Big Dyl (Event Planning)",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work3,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "A+ Roofing Excellence (Roofing Company)",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work6,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "Inflight Cuisine (Food Delivery Service)",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work7,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "UniFit (Fitness App)",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work8,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "UniFit (Fitness Ecommerce Shop) ",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work9,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+    {
+      status: "Personal Portfolio ",
+      name: "John Doe",
+      position: "Lead Designer",
+      avatar: work10,
+      items: items,
+      note: "Another project description and notes here.",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768, // mobile breakpoint
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          swipeToSlide: true,
+        },
+      },
+    ],
+  };
 
   return (
     <div className={cn("section-pb", styles.section)}>
@@ -213,40 +321,23 @@ const Hero = () => {
             resonate with excellence and innovation.
           </div>
         </div>
-        <div className={styles.gallery}>
-          {/* Image sections remain unchanged as per your instructions */}
-        </div>
+        {/* <div className={styles.gallery}></div> */}
 
-        <div className={styles.row}>
-          {projects["row1"].map((project, idx) => (
-            <ProjectLead key={idx} {...project} />
-          ))}
-        </div>
-        <div className={styles.row}>
-          {projects["row2"].map((project, idx) => (
-            <ProjectLead key={idx} {...project} />
-          ))}
-        </div>
-        <div className={styles.row}>
-          {projects["row3"].map((project, idx) => (
-            <ProjectLead key={idx} {...project} />
-          ))}
-        </div>
-        <div className={styles.row}>
-          {projects["row4"].map((project, idx) => (
-            <ProjectLead key={idx} {...project} />
-          ))}
-        </div>
-        <div className={styles.row}>
-          {projects["row5"].map((project, idx) => (
-            <ProjectLead key={idx} {...project} />
-          ))}
-        </div>
-        <div className={styles.row}>
-          {projects["row6"].map((project, idx) => (
-            <ProjectLead key={idx} {...project} />
-          ))}
-        </div>
+        {isMobile ? (
+          <Slider {...settings}>
+            {Object.values(allProjects).map((project, idx) => (
+              <div key={idx}>{<ProjectLead key={idx} {...project} />}</div>
+            ))}
+          </Slider>
+        ) : (
+          Object.values(projects).map((projectRow, idx) => (
+            <div key={idx} className={styles.row}>
+              {projectRow.map((project, index) => (
+                <ProjectLead key={index} {...project} />
+              ))}
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

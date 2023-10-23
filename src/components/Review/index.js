@@ -73,9 +73,9 @@ const Review = ({ className }) => {
             {items.map((x, index) => (
               <div className={styles.slide} key={index}>
                 <div className={cn("review-item", styles.item)}>
-                  <div className={styles.logo}>
+                  {/* <div className={styles.logo}>
                     <img src={x.logo} alt="Logo" />
-                  </div>
+                  </div> */}
                   <div className={styles.title}>{x.comment}</div>
                   <div className={styles.author}>{x.author}</div>
                   <div className={styles.position}>{x.position}</div>

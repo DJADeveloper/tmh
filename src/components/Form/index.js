@@ -10,33 +10,62 @@ const Form = ({ className, placeholder }) => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const phoneRegex = /^[0-9-+() ]{7,15}$/;
 
   function handleSubmit(event) {
     event.preventDefault();
-    const form = event.target;
+
+    let isValid = true;
+
+    if (!emailRegex.test(email)) {
+      setEmailError("Please enter a valid email address.");
+      isValid = false;
+    } else {
+      setEmailError("");
+    }
+
+    if (!phoneRegex.test(phone)) {
+      setPhoneError("Please enter a valid phone number.");
+      isValid = false;
+    } else {
+      setPhoneError("");
+    }
+
+    if (!isValid) {
+      return;
+    }
+
+    // Reset form fields immediately after submission for better UX
+    setName("");
+    setEmail("");
+    setPhone("");
+    setSubject("");
+    setMessage("");
+
     fetch("http://localhost:5001/api/send_email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: event.target.name.value,
-        email: event.target.email.value,
-        phone: event.target.phone.value,
-        subject: event.target.subject.value,
-        message: event.target.message.value,
-      }),
+      body: JSON.stringify({ name, email, phone, subject, message }),
     })
       .then((response) => response.json())
       .then((data) => {
-        setStatusMessage(data.message);
+        // setStatusMessage(data.message);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
       })
-
       .catch((error) => {
         console.error("Error:", error);
-        setStatusMessage("Failed to send email."); // Set failure message
+        setStatusMessage("Failed to send email.");
       });
-    form.reset(); // Reset form;
   }
 
   return (
@@ -63,6 +92,9 @@ const Form = ({ className, placeholder }) => {
         placeholder="Enter your email"
         required
       />
+      {emailError && (
+        <div className={cn(styles.errorMessage)}>{emailError}</div>
+      )}
       <input
         className={styles.input}
         type="text"
@@ -72,6 +104,9 @@ const Form = ({ className, placeholder }) => {
         placeholder="phone"
         required
       />
+      {phoneError && (
+        <div className={cn(styles.errorMessage)}>{phoneError}</div>
+      )}
       <input
         className={styles.input}
         type="text"
@@ -89,7 +124,7 @@ const Form = ({ className, placeholder }) => {
         placeholder="Your message"
         required
       />{" "}
-      {statusMessage && <div className={cn(styles.text)}>{statusMessage}</div>}{" "}
+      {statusMessage && <div className={cn(styles.text)}>{statusMessage}</div>}
       <button type="submit" className={styles.btn}>
         <Icon name="arrow-right" size="14" />
       </button>

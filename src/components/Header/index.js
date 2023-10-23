@@ -7,12 +7,16 @@ import Icon from "../Icon";
 
 const navLinks = [
   {
-    title: "Work",
-    url: "/work",
+    title: "Home",
+    url: "/home",
   },
   {
     title: "About",
     url: "/about",
+  },
+  {
+    title: "Work",
+    url: "/work",
   },
   {
     title: "Services",
@@ -162,6 +166,13 @@ const Headers = () => {
 
   const { pathname } = useLocation();
 
+  const handleOpenCalendly = () => {
+    // Open Calendly widget
+    if (window.Calendly) {
+      window.Calendly.showPopupWidget("https://calendly.com/themasteryhouse");
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={cn("container", styles.container)}>
@@ -222,18 +233,18 @@ const Headers = () => {
                 </a>
               ))}
             </div>
-            <Link
+            <div
               className={cn("button-stroke button-small", styles.button)}
-              to="/"
+              onClick={handleOpenCalendly}
             >
               Book a Call
-            </Link>
-            <Link
+            </div>
+            {/* <Link
               className={cn("button-stroke button-small", styles.button)}
               to="/"
             >
               Signin
-            </Link>
+            </Link> */}
           </div>
         </div>
         {/* <div style={{ marginInline: 15, display: "flex" }}>

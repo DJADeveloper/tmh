@@ -318,8 +318,9 @@ const Catalog = () => {
   // const [search, setSearch] = useState("");
 
   const filterItemsByService = () => {
+    console.log(activeIndex);
     const category = navLinks[activeIndex];
-    return items.filter((item) => item.categoryText === category);
+    return items.filter((item) => item.categoryText === date);
   };
   // const filterItemsByServiceDropDown = () => {
   //   const category = dateOptions[activeIndex];
@@ -338,6 +339,7 @@ const Catalog = () => {
   //     </Link>
   //   ));
   // };
+  console.log(date, "date");
 
   return (
     <div className={cn("section-pb", styles.section)}>

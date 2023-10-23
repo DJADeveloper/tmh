@@ -8,6 +8,7 @@ const Dropdown = ({ className, value, setValue, options }) => {
   const [visible, setVisible] = useState(false);
 
   const handleClick = (value) => {
+    console.log(value);
     setValue(value);
     setVisible(false);
   };

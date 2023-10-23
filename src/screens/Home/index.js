@@ -9,7 +9,6 @@ import Book from "./Book";
 import About from "./About";
 
 import Review from "../../components/Review";
-import Catalog from "../Class01/Catalog";
 
 const Home = () => {
   const scrollToRef = useRef(null);
@@ -18,7 +17,7 @@ const Home = () => {
     <>
       <Hero scrollToRef={scrollToRef} />
       <About scrollToRef={scrollToRef} />
-      <Catalog />
+
       <Steps />
       <Review className="section" />
       <Book />

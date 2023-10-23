@@ -17,7 +17,7 @@ const Offer = ({ className }) => {
           Your imagination. Our expertise. Let's collaborate to craft solutions
           that are as unique and exceptional as your business.
         </div>
-        <Link className={cn("button", styles.button)} to="/download">
+        <Link className={cn("button", styles.button)} to="/contact">
           Join Us Now
         </Link>
       </div>

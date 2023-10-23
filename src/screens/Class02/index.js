@@ -17,8 +17,8 @@ const Class02 = () => {
         title="Digital Solutions Tailored to Your Needs"
         description="Experience 1-on-1 consulting and project development to bring your visions to life. From software engineering to AI integration and digital marketing strategies, we ensure your brand stands out in the digital realm."
       />
-
       <Trainers />
+
       <Offer className="section-border-top" />
     </>
   );

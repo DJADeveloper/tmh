@@ -5,7 +5,6 @@ import styles from "./Programs.module.sass";
 import Slider from "react-slick";
 import Icon from "../Icon";
 import ScrollParallax from "../ScrollParallax";
-import MasteryStory from "../MasteryStory/masteryStory";
 
 const items = [
   {
@@ -78,7 +77,7 @@ const Programs = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
     <div className={cn(classNameSection, styles.section)}>
       <div className={styles.anchor} ref={scrollToRef}></div>
       <div className={cn("container", styles.container)}>
-        <MasteryStory />
+        {/* <MasteryStory /> */}
         <div className={styles.wrap}>
           <h2 className={cn("h2")}>{title}</h2>
           <Slider className={styles.serviceItem} {...settings}>

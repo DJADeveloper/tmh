@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import styles from "./Interesting.module.sass";
 import Icon from "../../../components/Icon";
 import Card from "../../../components/Card";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -307,6 +308,19 @@ const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
 );
 
 const Interesting = () => {
+  // State to hold the selected category
+  // const [selectedCategory, setSelectedCategory] = useState(null);
+
+  // Function to filter services by category
+  // const filterByCategory = (category) => {
+  //   setSelectedCategory(category);
+  // };
+
+  // Filter the items based on the selected category
+  // const filteredItems = selectedCategory
+  // ? items.filter((item) => item.categoryText === selectedCategory)
+  //   : items;
+
   const settings = {
     infinite: false,
     speed: 500,
@@ -343,7 +357,32 @@ const Interesting = () => {
     <div className={cn("section-pb", styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.wrapper}>
-          <h2 className={cn("h2", styles.title)}>You may interested</h2>
+          <h2 className={cn("h2", styles.title)}>You may be interested</h2>
+          {/* Buttons to select category */}
+          {/* <button
+            className={cn("button-stroke", styles.button)}
+            onClick={() => filterByCategory("Digital Marketing")}
+          >
+            Digital Marketing
+          </button>
+          <button
+            className={cn("button-stroke", styles.button)}
+            onClick={() => filterByCategory("Software Development")}
+          >
+            Software Development
+          </button>
+          <button
+            className={cn("button-stroke", styles.button)}
+            onClick={() => filterByCategory("Artificial Intelliegence")}
+          >
+            Artificial Intelligence
+          </button>
+          <button
+            className={cn("button-stroke", styles.button)}
+            onClick={() => setSelectedCategory(null)}
+          >
+            Show All
+          </button> */}
           <div className={styles.wrap}>
             <Slider className="interesting-slider" {...settings}>
               {items.map((x, index) => (
@@ -354,9 +393,9 @@ const Interesting = () => {
             </Slider>
           </div>
           <div className={styles.btns}>
-            <button className={cn("button-stroke", styles.button)}>
+            <Link to="/services" className={cn("button-stroke", styles.button)}>
               Browse more
-            </button>
+            </Link>
           </div>
         </div>
       </div>

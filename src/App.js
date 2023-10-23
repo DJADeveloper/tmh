@@ -31,14 +31,31 @@ import SEOService from "./screens/Services/DigitalMarketing/SEO";
 import EmailMarketingService from "./screens/Services/DigitalMarketing/EmailMarketing";
 import MobibleDevelopmentService from "./screens/Services/SoftwareDevelopment/MobilDevelopment";
 import { useEffect } from "react";
-import initTawkTo from "./components/Chatbot/tawkto";
 
 function App() {
-  // Chatbot
+  // Function to initialize Tawk.to
+  const initTawkTo = () => {
+    // Check if Tawk_API is already defined, if not, define it
+    if (!window.Tawk_API) {
+      window.Tawk_API = {};
+      window.Tawk_LoadStart = new Date();
+
+      const s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/6534fef0f2439e1631e6fc6b/1hdbg7mvn";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+
+      s0.parentNode.insertBefore(s1, s0);
+    }
+  };
+
+  // Chatbot initialization
   useEffect(() => {
     initTawkTo();
   }, []);
-
   return (
     <Routes>
       <Route

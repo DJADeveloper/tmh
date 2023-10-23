@@ -1,33 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import cn from "classnames";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import styles from "./ModalTrainer.module.sass";
 import Icon from "../Icon";
 import Modal from "../Modal";
-import Subscription from "../Subscription";
+// import Subscription from "../Subscription";
 
-const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
-  <button {...props}>{children}</button>
-);
+// const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
+//   <button {...props}>{children}</button>
+// );
 
 const ModalTrainer = ({ item, visible, onClose }) => {
-  const settings = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    nextArrow: (
-      <SlickArrow>
-        <Icon name="arrow-next" size="14" />
-      </SlickArrow>
-    ),
-    prevArrow: (
-      <SlickArrow>
-        <Icon name="arrow-prev" size="14" />
-      </SlickArrow>
-    ),
-  };
+  // const settings = {
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   nextArrow: (
+  //     <SlickArrow>
+  //       <Icon name="arrow-next" size="14" />
+  //     </SlickArrow>
+  //   ),
+  //   prevArrow: (
+  //     <SlickArrow>
+  //       <Icon name="arrow-prev" size="14" />
+  //     </SlickArrow>
+  //   ),
+  // };
 
   return (
     <Modal
@@ -53,7 +53,7 @@ const ModalTrainer = ({ item, visible, onClose }) => {
           </a>
         ))}
       </div>
-      <Subscription
+      {/* <Subscription
         className={styles.subscription}
         placeholder="Find a class"
       />
@@ -109,7 +109,7 @@ const ModalTrainer = ({ item, visible, onClose }) => {
         <button className={cn("button-small", styles.button)}>
           Browse all class
         </button>
-      </div>
+      </div> */}
     </Modal>
   );
 };
