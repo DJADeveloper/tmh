@@ -319,7 +319,7 @@ const Catalog = () => {
 
   const filterItemsByService = () => {
     console.log(activeIndex);
-    const category = navLinks[activeIndex];
+    // const category = navLinks[activeIndex];
     return items.filter((item) => item.categoryText === date);
   };
   // const filterItemsByServiceDropDown = () => {
