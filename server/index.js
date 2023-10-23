@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5001;
+const PORT = 5003;
 
 // Middleware to parse JSON requests
 app.use(express.json());
@@ -12,6 +12,42 @@ app.use(express.json());
 // Setup CORS
 app.use(cors({ methods: ["POST"] }));
 
+// Subscribe
+app.post("/api/subscribe", async (req, res) => {
+  const { email } = req.body;
+
+  // Set up transporter
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  // Define email options
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
+    subject: "New Subscription",
+    text: `
+        New Subscriber Email: ${email}
+        `,
+  };
+
+  // Send email
+  try {
+    await transporter.sendMail(mailOptions);
+    res
+      .status(200)
+      .json({ success: true, message: "Subscription successful!" });
+  } catch (error) {
+    console.error("Error sending subscription email:", error);
+    res.status(500).json({ success: false, message: "Subscription failed." });
+  }
+});
+
+// Send Email
 app.post("/api/send_email", async (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
