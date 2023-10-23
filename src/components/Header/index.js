@@ -8,7 +8,7 @@ import Icon from "../Icon";
 const navLinks = [
   {
     title: "Home",
-    url: "/home",
+    url: "/",
   },
   {
     title: "About",
