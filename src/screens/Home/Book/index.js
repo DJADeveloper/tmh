@@ -151,9 +151,8 @@ const Book = () => {
           </div>
           <div className={styles.note}>
             <strong className={styles.red}>Lets Talk</strong> about how The
-            Mastery House
-            <strong className={styles.black}>can help</strong>
-            you.
+            Mastery House{" "}
+            <strong className={styles.black}> can help you.</strong>
           </div>
           <div className={styles.btns}>
             <div
