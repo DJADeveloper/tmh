@@ -5,32 +5,32 @@ import ScrollParallax from "../../../components/ScrollParallax";
 
 const items = [
   {
-    title: "Initial Consultation",
-    color: "#3772FF",
+    title: "Software Development",
+    color: "#FF708A", // Lighter than #EF466F
     images: "/images/content/download.svg",
     content:
-      "Begin with a comprehensive discussion to understand your brand's objectives, target audience, and vision.",
+      "Crafting tailored software solutions to drive business outcomes and enhance user experience.",
   },
   {
-    title: "Design & Conceptualization",
-    color: "#9757D7",
+    title: "Digital Marketing",
+    color: "#EF466F", // Original reddish color
     images: "/images/content/whistle.svg",
     content:
-      "Our creative team develops a unique design concept tailored to your brand's identity and values.",
+      "Strategic online marketing campaigns to boost your brand's visibility and engagement.",
   },
   {
-    title: "Development & Testing",
-    color: "#EF466F",
+    title: "AI",
+    color: "#D1365B", // Darker than #EF466F
     images: "/images/content/medal.svg",
     content:
-      "Engineers bring the design to life with functional and responsive coding, followed by rigorous testing for perfection.",
+      "Leveraging the power of machine learning and AI to build intelligent and efficient systems.",
   },
   {
-    title: "Launch & Post-launch Support",
-    color: "#45B26B",
+    title: "Blockchain",
+    color: "#B02447", // Darker than #EF466F
     images: "/images/content/stopwatch.svg",
     content:
-      "Your digital solution is launched with precision. We also provide post-launch support ensuring seamless operation.",
+      "Empowering businesses with secure and transparent transaction systems using blockchain technology.",
   },
 ];
 
@@ -39,10 +39,10 @@ const Steps = ({ scrollToRef }) => {
     <div className={cn("section", styles.section)} ref={scrollToRef}>
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
-          <h2 className={cn("h2", styles.title)}>Our Process</h2>
+          <h2 className={cn("h2", styles.title)}>Our Services</h2>
           <div className={styles.info}>
-            Dive into the journey of creating digital masterpieces with our
-            step-by-step approach, tailored for success.
+            Offering a diverse range of services to cater to your business
+            needs. Let's transform the digital landscape together.
           </div>
         </div>
         <div className={styles.list}>

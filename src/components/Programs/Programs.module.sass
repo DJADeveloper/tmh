@@ -2,6 +2,7 @@
 
 .section
     position: relative
+    
 
 
 .anchor
@@ -21,9 +22,12 @@
 
 .title
     margin-bottom: 16px
+    font-size: 42px
+    text-align: center
 
 .info
     margin-bottom: 40px
+    text-align: center
     +caption-1
     color: $neutrals4
     strong
@@ -104,11 +108,24 @@
 
 .services-slider 
   .slick-slide 
-    margin-right: 24px// This introduces the gap between items.
+    display: flex
+    background-color: red
+    justify-content: center
+    align-items: center
+    margin-right: 12px// This introduces the gap between items.
+    margin-left: 12px// This introduces the gap between items.
 
     &:last-child 
       margin-right: 0// To ensure there's no extra margin for the last item.
    
+
+
+.serviceItem
+    
+    padding-left: 24px 
+    padding-bottom: 24px 
+
+
 
 .icon
     display: flex

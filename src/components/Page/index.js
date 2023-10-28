@@ -6,20 +6,20 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 const Page = ({ children }) => {
-    const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        clearAllBodyScrollLocks();
-    }, [pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    clearAllBodyScrollLocks();
+  }, [pathname]);
 
-    return (
-        <div className={styles.page}>
-            <Header />
-            <div className={styles.inner}>{children}</div>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className={styles.page}>
+      <Header />
+      <div className={styles.inner}>{children}</div>
+      <Footer />
+    </div>
+  );
 };
 
 export default Page;

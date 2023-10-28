@@ -5,12 +5,13 @@ const VideoComponent = ({
   videoSrc,
   videoTitle,
   poster,
-  autoplay = true,
-  muted = true,
+  autoplay = false,
+  muted = false,
   loop = true,
+  styles,
   ...props
 }) => (
-  <div className={styles.videoContainer}>
+  <div className={styles}>
     <video
       controls
       autoPlay={autoplay}

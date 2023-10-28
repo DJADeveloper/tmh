@@ -79,13 +79,7 @@ export const teamsList = [
         courses: courses,
         socials: socials,
       },
-      {
-        name: "Emily ",
-        image: "#",
-        position: "CEO",
-        courses: courses,
-        socials: socials,
-      },
+
       {
         name: "Lyu ",
         image: "/images/content/avatar-2.jpg",

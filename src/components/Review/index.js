@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import cn from "classnames";
 import Slider from "react-slick";
 import Icon from "../Icon";
@@ -65,24 +65,43 @@ const Review = ({ className }) => {
     ),
   };
 
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://widget.trustmary.com/_CNmxYCof";
+
+  //   // Get the specific div where you want the widget to be loaded.
+  //   const widgetDiv = document.getElementById("trustmary-widget-container");
+  //   widgetDiv.appendChild(script);
+
+  //   // Clean up the script when the component is unmounted.
+  //   return () => {
+  //     widgetDiv.removeChild(script);
+  //   };
+  // }, []);
+
   return (
     <div className={cn(className, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.wrap}>
-          <Slider className="review-slider" {...settings}>
+          {/* Place required DOM elements first */}
+          <div id="trustmary-widget-container"></div>
+
+          {/* Include the script directly */}
+          <script src="https://widget.trustmary.com/_CNmxYCof"></script>
+          {/* <Slider className="review-slider" {...settings}>
             {items.map((x, index) => (
               <div className={styles.slide} key={index}>
                 <div className={cn("review-item", styles.item)}>
-                  {/* <div className={styles.logo}>
+                  <div className={styles.logo}>
                     <img src={x.logo} alt="Logo" />
-                  </div> */}
+                  </div>
                   <div className={styles.title}>{x.comment}</div>
                   <div className={styles.author}>{x.author}</div>
                   <div className={styles.position}>{x.position}</div>
                 </div>
               </div>
             ))}
-          </Slider>
+          </Slider> */}
         </div>
       </div>
     </div>

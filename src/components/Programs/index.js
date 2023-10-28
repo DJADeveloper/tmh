@@ -14,7 +14,7 @@ const items = [
     image: "/images/content/user.svg",
     alt: "user",
     content:
-      "Crafting digital masterpieces with precision and flair. Dive into the realm of code, where innovation meets functionality.",
+      "Journey into the heart of digital creation. At The Mastery House, we sculpt lines of code into robust and elegant software solutions, marrying form and function seamlessly.",
   },
   {
     title: "Digital Marketing",
@@ -23,7 +23,7 @@ const items = [
     image: "/images/content/medal-1.svg",
     alt: "medal",
     content:
-      "Amplifying brand voices in the crowded digital marketplace. Harness the power of online channels to captivate your audience.",
+      "Elevate your brand's digital narrative. With a symphony of strategy, creativity, and technology, we amplify your presence, ensuring your voice resounds in every digital corner.",
   },
   {
     title: "Artificial Intelligence",
@@ -32,7 +32,7 @@ const items = [
     image: "/images/content/lightning.svg",
     alt: "lightning",
     content:
-      "Navigating the future with intelligence beyond human capability. Delve into the realm where machines think and learn.",
+      "Steer into the future with us, where machines resonate with human thought. At The Mastery House, we harness the power of AI, crafting solutions that think, adapt, and evolve.",
   },
 ];
 
@@ -40,7 +40,7 @@ const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
   <button {...props}>{children}</button>
 );
 
-const Programs = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
+const Programs = ({ description, title, classNameSection, scrollToRef }) => {
   const settings = {
     infinite: false,
     speed: 500,
@@ -79,7 +79,8 @@ const Programs = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
       <div className={cn("container", styles.container)}>
         {/* <MasteryStory /> */}
         <div className={styles.wrap}>
-          <h2 className={cn("h2")}>{title}</h2>
+          <h2 className={(cn("h2"), styles.title)}>{title}</h2>
+          <p className={styles.info}>{description}</p>
           <Slider className={styles.serviceItem} {...settings}>
             {items.map((x, index) => (
               <ScrollParallax className={styles.slide} key={index}>

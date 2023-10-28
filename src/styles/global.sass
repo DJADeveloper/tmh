@@ -1,0 +1,8 @@
+// Assume the CSS file is Home.module.sass or similar
+.container 
+    scroll-snap-type: y mandatory // This will snap vertically to each section
+    overflow-y: scroll mandatory           // Ensure it's scrollable
+    height: 100vh mandatory                // Full viewport height
+
+.section
+    scroll-snap-align: start

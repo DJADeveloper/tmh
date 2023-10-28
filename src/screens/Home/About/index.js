@@ -64,13 +64,13 @@ const About = () => {
           <div className={styles.col}>
             <div className={styles.bg}>
               <img srcSet={tech} src={tech} alt="About pic" />
-              <ScrollParallax className={styles.preview} animateIn="fadeInUp">
-                {/* <img
+              {/* <ScrollParallax className={styles.preview} animateIn="fadeInUp">
+                <img
                   srcSet="/images/tech/22 Wifi.png"
                   src="/images/tech/22 Wifi.png"
                   alt="Plate"
-                /> */}
-              </ScrollParallax>
+                />
+              </ScrollParallax> */}
               {/* <button className={cn("play", styles.play)}>
                 <Icon name="play" size="21" />
               </button> */}

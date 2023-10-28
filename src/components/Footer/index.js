@@ -58,7 +58,7 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.body}>
+      {/* <div className={styles.body}>
         <div className={cn("container", styles.container)}>
           <div className={styles.col}>
             <div className={styles.box}>
@@ -77,13 +77,13 @@ const Footer = () => {
                 })}
               >
                 <Theme className={styles.theme} />{" "}
-                {/* <div
+                <div
                 className={styles.category}
                 onClick={() => setVisible(!visible)}
               >
                 footer nav
                 <Icon name="arrow-bottom" size="9" />
-              </div> */}
+              </div>
                 <div className={styles.menu}>
                   {menu.map((x, index) => (
                     <NavLink
@@ -104,7 +104,6 @@ const Footer = () => {
             <div className={styles.category}>contact</div>
             <div className={styles.info}>
               <p>Tampa Florida</p>
-              <p>New York</p>
 
               <p>813-670-2774</p>
             </div>
@@ -121,7 +120,7 @@ const Footer = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.foot}>
         <div className={cn("container", styles.container)}>
           <div className={styles.copyright}>

@@ -309,6 +309,42 @@ const items = [
   },
 ];
 
+const servicePlans = [
+  {
+    category: "Software Development",
+    title: "Custom Software Solutions",
+    info: "Craft tailor-made software applications that align with your business needs and scale with its growth.",
+    benefits: [
+      "Streamlined business processes",
+      "Integration with existing tools and systems",
+      "Scalable and maintainable software infrastructure",
+    ],
+    plan: "/software-plan",
+  },
+  {
+    category: "Digital Marketing",
+    title: "Effective Digital Strategies",
+    info: "Leverage cutting-edge digital marketing techniques to increase your online presence and drive targeted traffic.",
+    benefits: [
+      "Higher brand visibility and recognition",
+      "Increased conversion and sales rates",
+      "Data-driven campaigns for precise targeting",
+    ],
+    plan: "/digital-plan",
+  },
+  {
+    category: "Artificial Intelliegence",
+    title: "AI-Driven Business Solutions",
+    info: "Harness the power of Artificial Intelligence to automate tasks, derive insights, and enhance user experiences.",
+    benefits: [
+      "Automated and efficient processes",
+      "In-depth business insights from data",
+      "Enhanced user personalization and engagement",
+    ],
+    plan: "/AI-plan",
+  },
+];
+
 const dateOptions = navLinks;
 
 const Catalog = () => {
@@ -316,40 +352,30 @@ const Catalog = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [date, setDate] = useState(dateOptions[0]);
 
-  // const [search, setSearch] = useState("");
-
-  const filterItemsByService = () => {
-    console.log(activeIndex);
-    const category = navLinks[activeIndex];
-    return items.filter((item) => item.categoryText === category);
+  const getActiveServicePlan = () => {
+    if (isMobile) {
+      return servicePlans.find((plan) => plan.category === date);
+    }
+    return servicePlans.find((plan) => plan.category === navLinks[activeIndex]);
   };
+
+  const filterItemsByCategory = () => {
+    if (activePlan) {
+      return items.filter((item) => item.categoryText === activePlan.category);
+    }
+    return [];
+  };
+
   const filterItemsByServiceDropdown = () => {
-    console.log(activeIndex);
-    // const category = navLinks[activeIndex];
     return items.filter((item) => item.categoryText === date);
   };
-  // const filterItemsByServiceDropDown = () => {
-  //   const category = dateOptions[activeIndex];
-  //   return items.filter((item) => item.categoryText === category);
-  // };
 
-  // const renderServiceItems = () => {
-  //   return filterItemsByService().map((item) => (
-  //     <Link to={item.url} key={item.title}>
-  //       <Card
-  //         className={styles.card}
-  //         item={item}
-
-  //         // ... (and other relevant props you want to pass to the Card component)
-  //       />
-  //     </Link>
-  //   ));
-  // };
-  console.log(date, "date");
+  const activePlan = getActiveServicePlan();
 
   return (
     <div className={cn("section-pb", styles.section)}>
       <div className={cn("container", styles.container)}>
+        {/* <PricingTiers tiersData={tiersData} /> */}
         <div className={styles.head}>
           <div className={styles.title}>
             Find a service that fits your needs
@@ -391,7 +417,7 @@ const Catalog = () => {
               ))}
             </div>
             {/* This is the key change */}
-            {window.innerWidth <= 768 ? (
+            {isMobile ? (
               <div className={styles.dropdown}>
                 <Dropdown
                   className={styles.dropdown}
@@ -410,16 +436,28 @@ const Catalog = () => {
             </div> */}
           </div>
         </div>
+        {/* active plan - future feature */}
+        {/* <div>
+          {activePlan ? (
+            <Workouts
+              title={activePlan.title}
+              info={activePlan.info}
+              path={activePlan.plan}
+              items={activePlan.benefits}
+            />
+          ) : null}
+        </div> */}
         <div className={styles.list}>
           {" "}
           {isMobile
             ? filterItemsByServiceDropdown().map((x, index) => (
                 <Card className={styles.card} item={x} key={index} />
               ))
-            : filterItemsByService().map((x, index) => (
+            : filterItemsByCategory().map((x, index) => (
                 <Card className={styles.card} item={x} key={index} />
               ))}
         </div>
+
         <div className={styles.btns}>
           <Link to="/contact" className={cn("button-stroke", styles.button)}>
             <span>Find Your Solution</span>

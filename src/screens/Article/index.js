@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import Review from "../../components/Review";
+
 import Story from "./Story";
 
 const Download = () => {
@@ -44,7 +44,7 @@ const Download = () => {
   return (
     <>
       <Post blog={seoBlog} />
-      <Review className="section-bg" />
+
       <Story />
     </>
   );

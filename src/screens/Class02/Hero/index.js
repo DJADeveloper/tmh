@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Hero.module.sass";
 import Image from "../../../components/Image";
-import ScrollButton from "../../../components/ScrollButton";
+// import ScrollButton from "../../../components/ScrollButton";
 import ScrollParallax from "../../../components/ScrollParallax";
 import techTeam from "../../../assets/images/3DTech/10. Team Discussion.png";
 
@@ -20,10 +20,10 @@ const Hero = ({ scrollToRef }) => {
             Mastering the Digital Landscape
           </h1>
           <div className={styles.text}>
-            Specializing in Software Development, AI, and Digital Marketing
-            Services. With every project, we're committed to excellence and
-            making a positive impact. A portion of our proceeds goes towards
-            supporting autistic organizations.
+            A passionate team of tech enthusiasts, we excel in Software
+            Development, AI, Blockchain, and Digital Marketing. Committed to the
+            forefront of technology, we ensure a seamless experience for our
+            guests.
           </div>
           {isMobile && (
             <div className={styles.gallery}>
@@ -69,12 +69,12 @@ const Hero = ({ scrollToRef }) => {
             Explore Our Services
           </Link>
         </div>
-        <ScrollButton
+        {/* <ScrollButton
           onScroll={() =>
             scrollToRef.current.scrollIntoView({ behavior: "smooth" })
           }
           className={styles.scroll}
-        />
+        /> */}
         {!isMobile && (
           <div className={styles.gallery}>
             <div className={styles.preview}>

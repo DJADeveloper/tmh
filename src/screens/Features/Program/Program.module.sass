@@ -12,8 +12,30 @@
     +m
         display: block
         border-radius: 16px
+        flex-direction: column
     +dark
         background: $neutrals1
+
+.imageCol
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+
+.container
+    max-width: 1400px // or any value you feel is optimal
+    margin-left: auto
+    margin-right: auto
+    +m
+        padding: 0 20px // added padding for mobile
+
+.item
+    width: 100%
+    +m
+        width: 100% // take full width on mobile
+        margin-left: 0px
+        margin-right: 0px
 
 .col
     &:first-child
@@ -31,20 +53,92 @@
 
 .stage
     margin-bottom: 24px
-    padding-left: 24px
+    // padding-left: 24px
     +m
         margin-bottom: 16px
         padding-left: 10px
 
+.title
+    margin-bottom: 20px
+
+.info
+    max-width: 450px
+    color: $neutrals4
+
+.list
+    max-width: 460px
+    +m
+        max-width: 100%
+
+.button
+  margin-top: auto
+  padding: 12px 24px
+  border: none
+  border-radius: 8px
+  background-color: $red
+  color: $neutrals8
+  transition: background-color .2s
+  &:hover
+    background-color: darken($red, 10%)
+
+
+.twoColumns 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 100px
+
+    .item 
+        width: calc(580% - 10px)
+     
+       
+        
+        &:nth-child(odd)
+            margin-right: 0px 
+
+    
+
+
+
+    
+
+
+
+
+
 .item
+ 
     &:not(:last-child)
+        margin-bottom: 28px
+        +t
+            margin-bottom: 32px
+    
+.number
+    display: inline-block
+    width: 38px
+    margin-bottom: 24px
+    border-radius: 12px
+    text-align: center
+    font-size: 14px
+    font-weight: 500
+    line-height: 24px
+    color: $neutrals8
+    +t
         margin-bottom: 16px
-        +m
-            margin-bottom: 0
-    +dark
-        &:not(:last-child)
-            +m
-                margin-bottom: 8px
+    +m
+        margin-bottom: 24px
+
+.subtitle
+    margin-bottom: 16px
+    font-weight: 500
+    +t
+        margin-bottom: 12px
+    +m
+        margin-bottom: 16px
+
+.content
+    +caption-1
+    color: $neutrals4
 
 .link
     display: flex
@@ -93,10 +187,11 @@
         margin-bottom: 32px
     img
         max-width: 400px
+        height: auto
         +d
             max-width: 240px
 
 .info
     max-width: 380px
-    margin: 0 auto 24px
+    margin: 0 0 24px
     color: $neutrals4

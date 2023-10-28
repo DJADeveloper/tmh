@@ -94,48 +94,55 @@ const items = [
 ];
 
 const Team = () => {
-  const options = [];
-  items.map((x) => options.push(x.title));
+  const services = [
+    "Web Development",
+    "Mobile Development",
+    "Data Science",
+    "Backend Development",
+    "DevOps",
+    // ... add more services as needed
+  ];
 
-  const [category, setCategory] = useState(options[0]);
+  // Default to the first service
+  const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
     <div className={cn("section-border-top", styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.top}>
           <div className={cn("stage-small", styles.stage)}>
-            learn how to get started
+            Learn about our Software Engineering services
           </div>
           <h2 className={cn("h2", styles.title)}>Frequently Asked Questions</h2>
           <div className={styles.info}>
-            Join The Mastery House community now to get free updates and also
-            alot of freebies are waiting for you or{" "}
+            Join The Mastery House community now to get free updates and also a
+            lot of freebies are waiting for you or{" "}
             <a href="/#">Contact Support</a>
           </div>
           <div className={styles.nav}>
-            {items.map((x, index) => (
+            {services.map((service, index) => (
               <button
                 className={cn(styles.btn, {
-                  [styles.active]: x.title === category,
+                  [styles.active]: service === selectedService,
                 })}
-                onClick={() => setCategory(x.title)}
+                onClick={() => setSelectedService(service)}
                 key={index}
               >
-                {x.title}
+                {service}
               </button>
             ))}
           </div>
           <Dropdown
             className={styles.dropdown}
-            value={category}
-            setValue={setCategory}
-            options={options}
+            value={selectedService}
+            setValue={setSelectedService}
+            options={services}
           />
         </div>
         <div className={styles.list}>
           {items
-            .find((x) => x.title === category)
-            .items.map((x, index) => (
+            .find((x) => x.title === selectedService)
+            ?.items.map((x, index) => (
               <Item item={x} key={index} />
             ))}
         </div>
