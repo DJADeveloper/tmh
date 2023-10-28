@@ -8,7 +8,7 @@ const VideoComponent = ({
   autoplay = false,
   muted = false,
   loop = true,
-  styles,
+
   ...props
 }) => (
   <div className={styles}>

@@ -1,9 +1,7 @@
 import React from "react";
 import cn from "classnames";
-import { Link } from "react-router-dom";
+
 import styles from "./Workouts.module.sass";
-import Image from "../Image";
-import ScrollParallax from "../ScrollParallax";
 
 const Workouts = ({ title, info, path, items }) => {
   return (

@@ -9,7 +9,6 @@ import Book from "./Book";
 // import About from "./About";
 
 import Program from "../Features/Program";
-import Review from "../../components/Review";
 
 const Home = () => {
   const scrollToRef = useRef(null);

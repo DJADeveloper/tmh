@@ -1,31 +1,29 @@
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
-import Subscription from "../Subscription";
-import Theme from "../Theme/index";
 
 import Icon from "../Icon";
 
-const menu = [
-  {
-    title: "About",
-    url: "/about",
-  },
-  {
-    title: "Work",
-    url: "/work",
-  },
-  {
-    title: "Services",
-    url: "/services",
-  },
+// const menu = [
+//   {
+//     title: "About",
+//     url: "/about",
+//   },
+//   {
+//     title: "Work",
+//     url: "/work",
+//   },
+//   {
+//     title: "Services",
+//     url: "/services",
+//   },
 
-  {
-    title: "Contact",
-    url: "/contact",
-  },
-];
+//   {
+//     title: "Contact",
+//     url: "/contact",
+//   },
+// ];
 
 const socials = [
   {
@@ -52,9 +50,9 @@ const socials = [
 
 const Footer = () => {
   // const [visible, setVisible] = useState(false);
-  const visible = true;
+  // const visible = true;
 
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
 
   return (
     <footer className={styles.footer}>

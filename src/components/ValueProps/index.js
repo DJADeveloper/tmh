@@ -2,7 +2,6 @@ import React from "react";
 import cn from "classnames";
 import styles from "./ValueProps.module.sass";
 import ScrollParallax from "../ScrollParallax";
-import VideoComponent from "../Video";
 
 const items = [
   {

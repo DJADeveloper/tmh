@@ -6,7 +6,6 @@ import videoFiles from "../../../assets/videos/TmhVideo.mp4";
 
 // import ScrollButton from "../../../components/ScrollButton";
 import VideoComponent from "../../../components/Video";
-import ScrollButton from "../../../components/ScrollButton";
 
 const Hero = ({ scrollToRef }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming mobile width is 768px or less

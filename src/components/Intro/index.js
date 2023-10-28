@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import styles from "./Intro.module.sass";
-import ScrollParallax from "../ScrollParallax";
+// import ScrollParallax from "../ScrollParallax";
 
 const Intro = ({ scrollToRef, content }) => {
   return (

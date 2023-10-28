@@ -1,18 +1,8 @@
 import React, { useRef } from "react";
 // import styles from "./Features.module.sass";
-import Hero from "./Hero";
-import Intro from "../../components/Intro";
+
 import ValueProps from "../../components/ValueProps";
-import Program from "./Program";
-import About from "./About";
-import Review from "../../components/Review";
-import Clients from "../../components/Clients";
-import Workouts from "../../components/Workouts";
-import Advantages from "../../components/Advantages";
-import Offer from "../../components/Offer";
-import VideoComponent from "../../components/Video";
-import videoFiles from "../../assets/videos/TmhVideo.mp4";
-import styles from "./Video/Videos.module.sass";
+
 import Programs from "../../components/Programs";
 
 const Features = () => {
