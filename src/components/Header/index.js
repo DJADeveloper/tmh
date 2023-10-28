@@ -4,6 +4,8 @@ import cn from "classnames";
 import styles from "./Header.module.sass";
 import DropdownMenu from "./DropdownMenu";
 import Icon from "../Icon";
+import logo from "../../assets/images/logo/5.png";
+import Image from "../Image";
 
 const navLinks = [
   {
@@ -182,9 +184,17 @@ const Headers = () => {
           onClick={() => setVisibleNav(false)}
         >
           <div className={styles.logoContainer}>
-            <span className={styles.logoMainText}>The Mastery House</span>
+            <Image
+              srcSet={`${logo} 2x`}
+              srcSetDark={`${logo} 2x`}
+              src={logo}
+              srcDark={logo}
+              className={styles.realLogo}
+              alt="logo"
+            />
+            {/* <span className={styles.logoMainText}>The Mastery House</span>
             <br />
-            <span className={styles.logoSubText}>Creative Digital Agency</span>
+            <span className={styles.logoSubText}>Creative Digital Agency</span> */}
           </div>
         </Link>
         <div className={cn(styles.wrap, { [styles.active]: visibleNav })}>
