@@ -63,7 +63,7 @@ const Hero = ({ scrollToRef }) => {
             {!isMobile && (
               <VideoComponent
                 videoSrc={videoFiles}
-                height="500px"
+                height="400px"
                 autoplay={true}
                 muted={true}
                 loop={true}
