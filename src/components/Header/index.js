@@ -115,10 +115,10 @@ const navLinks = [
   //   title: "Blog",
   //   url: "/lifestyle",
   // },
-  {
-    title: "Contact",
-    url: "/contact",
-  },
+  // {
+  //   title: "Contact",
+  //   url: "/contact",
+  // },
   //   {
   //     title: "Lifestyle",
   //     url: "/lifestyle",

@@ -64,7 +64,7 @@ const Form = ({ className, placeholder }) => {
       })
       .catch((error) => {
         console.error("Error:", error);
-        setStatusMessage("Failed to send email.");
+        setStatusMessage("Failed to send message.");
       });
   }
 
