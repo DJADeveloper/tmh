@@ -13,3 +13,16 @@
 @import ./blocks/slick
 @import ./blocks/status
 @import ./blocks/animations
+
+// scroll button location
+.scroll-btn
+    position: fixed
+    right: 30px
+    bottom: 80px
+    z-index: 1000 
+
+    // Adjustments for mobile devices
+    @media (max-width: 768px)
+        right: 20px  // Closer to the right
+        bottom: 40px // More down
+    
