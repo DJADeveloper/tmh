@@ -4,6 +4,7 @@ import cn from "classnames";
 import styles from "./Footer.module.sass";
 
 import Icon from "../Icon";
+import Theme from "../Theme/index";
 
 // const menu = [
 //   {
@@ -124,6 +125,7 @@ const Footer = () => {
           <div className={styles.copyright}>
             Copyright © 2023 THE MASTERY HOUSE LLC. All rights reserved
           </div>
+
           <div className={styles.socials}>
             {socials.map((x, index) => (
               <a
@@ -136,6 +138,9 @@ const Footer = () => {
                 <Icon name={x.title} size={x.size} />
               </a>
             ))}
+          </div>
+          <div className={styles.theme}>
+            <Theme />
           </div>
         </div>
       </div>

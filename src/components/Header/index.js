@@ -4,8 +4,10 @@ import cn from "classnames";
 import styles from "./Header.module.sass";
 import DropdownMenu from "./DropdownMenu";
 import Icon from "../Icon";
-import logo from "../../assets/images/logo/5.png";
+import logo from "../../assets/images/logo/tmhLogo.png";
+import logoDark from "../../assets/images/logo/tmhLogoDark.png";
 import Image from "../Image";
+import Theme from "../Theme";
 
 const navLinks = [
   {
@@ -186,9 +188,9 @@ const Headers = () => {
           <div className={styles.logoContainer}>
             <Image
               srcSet={`${logo} 2x`}
-              srcSetDark={`${logo} 2x`}
+              srcSetDark={`${logoDark} 2x`}
               src={logo}
-              srcDark={logo}
+              srcDark={logoDark}
               className={styles.realLogo}
               alt="logo"
             />
@@ -257,9 +259,9 @@ const Headers = () => {
             </Link> */}
           </div>
         </div>
-        {/* <div style={{ marginInline: 15, display: "flex" }}>
+        <div style={{ marginInline: 50 }}>
           <Theme />
-        </div> */}
+        </div>
         <Link
           className={cn("button button-small", styles.button)}
           to="/contact"
@@ -272,6 +274,7 @@ const Headers = () => {
         >
           Signin
         </Link> */}
+
         <button
           className={cn(styles.burger, {
             [styles.active]: visibleNav,
