@@ -150,21 +150,6 @@ const socials = [
   },
 ];
 
-const contact = [
-  {
-    title: "Montanachester",
-    content: "06787 Block Estates",
-  },
-  {
-    title: "Lake Gene",
-    content: "167 Emard River",
-  },
-  {
-    title: "North Hassiefort",
-    content: "032 Leonora Spurs",
-  },
-];
-
 const Headers = () => {
   const [visibleNav, setVisibleNav] = useState(false);
 
@@ -225,14 +210,6 @@ const Headers = () => {
             )}
           </nav>
           <div className={styles.details}>
-            <div className={styles.contact}>
-              {contact.map((x, index) => (
-                <div className={styles.element} key={index}>
-                  <div className={styles.category}>{x.title}</div>
-                  <div className={styles.text}>{x.content}</div>
-                </div>
-              ))}
-            </div>
             <div className={styles.socials}>
               {socials.map((x, index) => (
                 <a

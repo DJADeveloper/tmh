@@ -80,6 +80,9 @@
   
   @media (max-width: 768px)
     display: block
+    // Add margin between rows for tablets
+    & > *:not(:last-child)
+      margin-bottom: 32px  // Adjust this value as needed
 
 .wrap
   flex: 0 0 calc(33.33% - 10px)  
