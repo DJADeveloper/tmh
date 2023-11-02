@@ -262,7 +262,7 @@ const Headers = () => {
         </div>
 
         {!isMobile && (
-          <div style={{ marginRight: 50 }}>
+          <div style={{ marginRight: 20, marginTop: 15 }}>
             <Theme />
           </div>
         )}
