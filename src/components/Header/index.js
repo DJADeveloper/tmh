@@ -19,10 +19,6 @@ const navLinks = [
     url: "/about",
   },
   {
-    title: "Work",
-    url: "/work",
-  },
-  {
     title: "Services",
     url: "/services",
     // content: {
@@ -113,6 +109,10 @@ const navLinks = [
     //   ],
     // },
   },
+  {
+    title: "Work",
+    url: "/work",
+  },
   // {
   //   title: "Blog",
   //   url: "/lifestyle",
@@ -169,6 +169,7 @@ const Headers = () => {
   const [visibleNav, setVisibleNav] = useState(false);
 
   const { pathname } = useLocation();
+  const isMobile = window.innerWidth <= 768;
 
   const handleOpenCalendly = () => {
     // Open Calendly widget
@@ -259,9 +260,13 @@ const Headers = () => {
             </Link> */}
           </div>
         </div>
-        <div style={{ marginInline: 50 }}>
-          <Theme />
-        </div>
+
+        {!isMobile && (
+          <div style={{ marginRight: 50 }}>
+            <Theme />
+          </div>
+        )}
+
         <Link
           className={cn("button button-small", styles.button)}
           to="/contact"

@@ -4,7 +4,6 @@ import cn from "classnames";
 import styles from "./Footer.module.sass";
 
 import Icon from "../Icon";
-import Theme from "../Theme/index";
 
 // const menu = [
 //   {
@@ -139,9 +138,9 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <div className={styles.theme}>
+          {/* <div className={styles.theme}>
             <Theme />
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
