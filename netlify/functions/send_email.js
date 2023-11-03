@@ -34,16 +34,16 @@ exports.handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify({
         success: true,
-        message: "Email sent successfully!",
+        message: "Message sent successfully!",
       }),
     };
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Error sending message:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         success: false,
-        message: "Failed to send email.",
+        message: "Failed to send message.",
       }),
     };
   }
