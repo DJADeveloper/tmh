@@ -46,7 +46,7 @@ const Form = ({ className, placeholder }) => {
     setSubject("");
     setMessage("");
 
-    fetch("http://localhost:5001/api/send_email", {
+    fetch("/.netlify/functions/send_email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const Form = ({ className, placeholder }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // setStatusMessage(data.message);
+        setStatusMessage(data.message);
         setName("");
         setEmail("");
         setPhone("");
