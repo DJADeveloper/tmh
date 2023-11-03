@@ -6,20 +6,24 @@ import contactImage from "../../../assets/images/3DTech/8. Online Meeting.png";
 import Form from "../../../components/Form";
 
 const Hero = () => {
+  const isMobile = window.innerWidth <= 768;
   return (
     <div className={styles.hero}>
       <div className={cn("container", styles.container)}>
-        <div className={styles.col}>
-          <div className={styles.preview}>
-            <Image
-              srcSet={contactImage}
-              srcSetDark={contactImage}
-              src={contactImage}
-              srcDark={contactImage}
-              alt="Contact us"
-            />
+        {!isMobile && (
+          <div className={styles.col}>
+            <div className={styles.preview}>
+              <Image
+                srcSet={contactImage}
+                srcSetDark={contactImage}
+                src={contactImage}
+                srcDark={contactImage}
+                alt="Contact us"
+              />
+            </div>
           </div>
-        </div>
+        )}
+
         <div className={styles.col}>
           <div className={styles.wrap}>
             <div className={cn("stage", styles.stage)}>

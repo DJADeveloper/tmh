@@ -1,54 +1,63 @@
 @import ../../../styles/helpers
 
-.container
+.container 
     display: flex
     align-items: center
     justify-content: center
     max-width: 100%
     padding: 50px
-    +m
+    @media (max-width: var(--breakpoint-lg)) 
         display: block
+    
 
-.col
+
+.col 
     flex: 0 0 50%
-    &:first-child
-        +d
+    &:first-child 
+        @media (max-width: var(--breakpoint-lg)) 
             flex: 0 0 40%
-        +t
-            flex: 0 0 45%
-    &:nth-child(2)
-        padding: 0 64px 0 106px
-        +x
-            padding: 0 40px 0 80px
-        +d
-            flex: 0 0 60%
-        +t
-            flex: 0 0 55%
-            padding: 0 40px 0 40px
-        +m
-            // padding: 48px 32px 64px
+        
+        @media (max-width: var(--breakpoint-md)) 
             flex: 0 0 100%
             width: 100%
             padding: 24px 16px
+        
+    
+    &:nth-child(2) 
+        padding: 0 64px 0 106px
+        @media (max-width: var(--breakpoint-lg)) 
+            flex: 0 0 60%
+            padding: 0 40px 0 40px
+        
+        @media (max-width: var(--breakpoint-md)) 
+            flex: 0 0 100%
+            width: 100%
+            padding: 24px 16px
+        
+    
 
 
-.wrap
+.wrap 
     max-width: 450px
-    +m
+    @media (max-width: var(--breakpoint-md)) 
         max-width: 100%
-        // padding: 16px
+        padding: 16px
+    
 
-.stage
+
+.stage 
     margin-bottom: 21px
 
-.title
+
+.title 
     position: relative
     margin-bottom: 35px
     padding-bottom: 36px
-    +m
+    @media (max-width: var(--breakpoint-md)) 
         margin-bottom: 24px
         padding-bottom: 24px
-    &:after
+    
+    &:after 
         content: ""
         position: absolute
         left: 0
@@ -56,24 +65,32 @@
         width: 128px
         height: 1px
         background: $neutrals6
-        +dark
+        @media (prefers-color-scheme: dark) 
             background: $neutrals3
+        
+    
 
-.text
+
+.text 
     margin-bottom: 40px
     color: $neutrals4
-    +m
+    @media (max-width: var(--breakpoint-md)) 
         margin-bottom: 24px
+    
 
-.subscription
+
+.subscription 
     max-width: 300px
 
-.preview
-     +m
-         width: 100%
-         height: auto
 
-     img
-         width: 100%
-         height: auto
-         object-fit: cover
+.preview 
+    @media (max-width: var(--breakpoint-md)) 
+        width: 100%
+        height: auto
+    
+    img 
+        width: 100%
+        height: auto
+        object-fit: cover
+    
+
