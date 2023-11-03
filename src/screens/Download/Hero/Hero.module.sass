@@ -1,63 +1,54 @@
 @import ../../../styles/helpers
 
-.container 
+.container
     display: flex
     align-items: center
     justify-content: center
     max-width: 100%
     padding: 50px
-    @media (max-width: var(--breakpoint-lg)) 
+    +m
         display: block
-    
 
-
-.col 
+.col
     flex: 0 0 50%
-    &:first-child 
-        @media (max-width: var(--breakpoint-lg)) 
+    &:first-child
+        +d
             flex: 0 0 40%
-        
-        @media (max-width: var(--breakpoint-md)) 
-            flex: 0 0 100%
-            width: 100%
-            padding: 24px 16px
-        
-    
-    &:nth-child(2) 
+        +t
+            flex: 0 0 45%
+    &:nth-child(2)
         padding: 0 64px 0 106px
-        @media (max-width: var(--breakpoint-lg)) 
+        +x
+            padding: 0 40px 0 80px
+        +d
             flex: 0 0 60%
+        +t
+            flex: 0 0 55%
             padding: 0 40px 0 40px
-        
-        @media (max-width: var(--breakpoint-md)) 
+        +m
+            // padding: 48px 32px 64px
             flex: 0 0 100%
             width: 100%
             padding: 24px 16px
-        
-    
 
 
-.wrap 
+.wrap
     max-width: 450px
-    @media (max-width: var(--breakpoint-md)) 
+    +m
         max-width: 100%
-        padding: 16px
-    
+        // padding: 16px
 
-
-.stage 
+.stage
     margin-bottom: 21px
 
-
-.title 
+.title
     position: relative
     margin-bottom: 35px
     padding-bottom: 36px
-    @media (max-width: var(--breakpoint-md)) 
+    +m
         margin-bottom: 24px
         padding-bottom: 24px
-    
-    &:after 
+    &:after
         content: ""
         position: absolute
         left: 0
@@ -65,32 +56,24 @@
         width: 128px
         height: 1px
         background: $neutrals6
-        @media (prefers-color-scheme: dark) 
+        +dark
             background: $neutrals3
-        
-    
 
-
-.text 
+.text
     margin-bottom: 40px
     color: $neutrals4
-    @media (max-width: var(--breakpoint-md)) 
+    +m
         margin-bottom: 24px
-    
 
-
-.subscription 
+.subscription
     max-width: 300px
 
+.preview
+     +m
+         width: 100%
+         height: auto
 
-.preview 
-    @media (max-width: var(--breakpoint-md)) 
-        width: 100%
-        height: auto
-    
-    img 
-        width: 100%
-        height: auto
-        object-fit: cover
-    
-
+     img
+         width: 100%
+         height: auto
+         object-fit: cover

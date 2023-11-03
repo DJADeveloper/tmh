@@ -250,6 +250,10 @@ const Headers = () => {
         >
           Let's Talk
         </Link>
+        {/* Add phone number here */}
+        {/* <div className={styles.phoneNumber}>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </div> */}
         {/* <Link
           className={cn("button-stroke button-small", styles.button)}
           to="/"

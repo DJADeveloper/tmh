@@ -8,7 +8,8 @@ import videoFiles from "../../../assets/videos/TmhVideo.mp4";
 import VideoComponent from "../../../components/Video";
 
 const Hero = ({ scrollToRef }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Assuming mobile width is 768px or less
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700); // Assuming mobile width is 768px or less
+  const isTablet = window.innerWidth >= 700 && window.innerWidth <= 768;
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,7 +37,15 @@ const Hero = ({ scrollToRef }) => {
             Merging technology and creativity, we embody creative
             problem-solving to craft unique experiences.
           </div>
-
+          {isTablet && (
+            <VideoComponent
+              videoSrc={videoFiles}
+              height="200px"
+              autoplay={true}
+              muted={true}
+              loop={true}
+            />
+          )}
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">
               Start Your Digital Story
@@ -58,19 +67,19 @@ const Hero = ({ scrollToRef }) => {
           }
           className={styles.scroll}
         /> */}
-        <div className={styles.gallery}>
-          <div className={styles.preview}>
-            {!isMobile && (
+        {!isMobile && (
+          <div className={styles.gallery}>
+            <div className={styles.preview}>
               <VideoComponent
                 videoSrc={videoFiles}
-                height="400px"
+                height={isMobile ? "200px" : "400px"}
                 autoplay={true}
                 muted={true}
                 loop={true}
               />
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

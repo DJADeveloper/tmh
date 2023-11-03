@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
         )}
 
-        <div className={styles.col}>
+        <div className={!isMobile && styles.col}>
           <div className={styles.wrap}>
             <div className={cn("stage", styles.stage)}>
               Empower Your Digital Presence
