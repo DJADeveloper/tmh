@@ -32,6 +32,7 @@ import EmailMarketingService from "./screens/Services/DigitalMarketing/EmailMark
 import MobibleDevelopmentService from "./screens/Services/SoftwareDevelopment/MobilDevelopment";
 import { useEffect, useState } from "react";
 import ScrollButton from "./components/ScrollButton";
+import MetaPixel from "./components/MetaPixel/Index";
 
 function App() {
   // Function to initialize Tawk.to
@@ -87,6 +88,7 @@ function App() {
   }, []);
   return (
     <>
+      <MetaPixel pixelId="855079152604334" />
       <Routes>
         <Route
           path="/"
