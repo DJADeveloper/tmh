@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./Post.module.sass";
 import Icon from "../../../components/Icon";
 
-const AIInnovation = () => {
+const AIInnovations = () => {
   return (
     <div className={cn("section", styles.section)}>
       <div className={cn("container", styles.container)}>
@@ -17,40 +17,61 @@ const AIInnovation = () => {
         </div>
         <div className={styles.row}>
           <div className={styles.col}>
-            {/* Optional: Image related to AI innovation */}
             <div className={styles.preview}>
+              {/* Replace with the path to your first image */}
               <img
-                src="/images/content/ai-innovation.png"
-                alt="AI Innovation"
+                src="/images/content/blog/ai-innovation.png"
+                alt="AI in the Office"
               />
             </div>
           </div>
           <div className={styles.col}>
+            <h2 className={cn("h2", styles.title)}>
+              Embracing the New Collaborator: Artificial Intelligence
+            </h2>
+            <div className={styles.info}>
+              In the bustling digital era, businesses are finding a new ally in
+              artificial intelligence (AI). Far from the cold, metallic
+              portrayal in science fiction, today's AI is like a warm breeze,
+              pushing enterprises towards uncharted realms of efficiency and
+              personalization.
+            </div>
+            {/* <div className={styles.preview}>
+              
+              <img
+                src="/images/content/blog/ai-innovation.png"
+                alt="AI in a Meeting"
+              />
+            </div> */}
             <div className={styles.content}>
               <p>
-                The advent of AI-driven solutions in 2023 has transitioned from
-                a futuristic concept to a core facet of business strategy.
-                Organizations are rapidly integrating AI to gain a competitive
-                edge, enhance customer engagement, and achieve operational
-                efficiency. This shift has ushered in an era where intelligent
-                analytics, automated customer service bots, and predictive
-                models are not just innovations but expectations.
+                Imagine walking into an office where your coffee is brewed just
+                how you like it, thanks to a smart system that remembers your
+                preferences. Picture a conference room where a virtual assistant
+                not only takes notes but also offers insights drawn from the
+                latest market trends. This is the business landscape of 2023,
+                where AI is less of a tool and more of a partner.
               </p>
               <p>
-                AI is not merely a tool for streamlining processes; it's
-                redefining the way businesses interact with their customers and
-                make decisions. In this exploration, we delve into the
-                real-world applications of AI that are making waves across
-                various sectors. We'll look at the success stories, the
-                challenges faced, and the strategies companies are using to
-                harness the full potential of AI.
+                If you're new to technology, AI in 2023 is not about
+                overwhelming changes; it's about subtle enhancements that make
+                life simpler. For the tech-savvy, it's the advanced algorithms
+                that process data at breakneck speeds, offering insights that
+                inform strategic decisions.
               </p>
               <p>
-                Join us in uncovering how AI-driven insights are creating new
-                opportunities and what it means for the future of industries.
-                Whether it's through enhancing the customer experience, enabling
-                smarter supply chains, or driving innovation in product
-                development, AI's impact is profound and pervasive.
+                Let's take a day in the life of a business in 2023. Morning
+                commutes are optimized by AI, reducing traffic and pollution. At
+                work, AI helps prioritize your tasks based on your productivity
+                patterns. In meetings, data analytics powered by AI provide a
+                backdrop for informed discussions.
+              </p>
+              <p>
+                The rise of AI in business is not just about smarter machines;
+                it's about a smarter way of working where everyone can find
+                value. Join us in embracing the rise of AI in 2023, where
+                business and technology walk hand in hand towards a horizon
+                brimming with possibilities.
               </p>
             </div>
           </div>
@@ -60,4 +81,4 @@ const AIInnovation = () => {
   );
 };
 
-export default AIInnovation;
+export default AIInnovations;

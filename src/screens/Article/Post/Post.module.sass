@@ -24,12 +24,13 @@
 
 .col
     &:first-child
-        flex: 0 0 256px
+        flex: 0 0 356px
+
         margin-right: auto
         +d
             margin-right: 80px
         +t
-            max-width: 400px
+            max-width: 600px
             margin: 0 auto
     &:nth-child(2)
         flex: 0 0 640px
@@ -42,6 +43,8 @@
             margin-bottom: 48px
         .title
             margin-bottom: 32px
+        .subTitle
+             margin-bottom: 22px
         .preview
             margin-bottom: 80px
             +m
@@ -54,6 +57,7 @@
 
 .info
     margin-bottom: 84px
+    font-size: 22px
     +body-1
     color: $neutrals4
     +m

@@ -372,7 +372,7 @@ function App() {
           }
         />
         <Route
-          path="/article-cyber-security-essentials"
+          path="/article-cyber-security"
           element={
             <Page>
               <CybersecurityEssentials />
