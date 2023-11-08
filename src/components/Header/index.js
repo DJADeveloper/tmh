@@ -7,7 +7,6 @@ import Icon from "../Icon";
 import logo from "../../assets/images/logo/tmhLogo.png";
 import logoDark from "../../assets/images/logo/tmhLogoDark.png";
 import Image from "../Image";
-import Theme from "../Theme";
 
 const navLinks = [
   {
@@ -113,14 +112,14 @@ const navLinks = [
     title: "Work",
     url: "/work",
   },
-  // {
-  //   title: "Blog",
-  //   url: "/lifestyle",
-  // },
   {
-    title: "Contact",
-    url: "/contact",
+    title: "Blog",
+    url: "/lifestyle",
   },
+  // {
+  //   title: "Contact",
+  //   url: "/contact",
+  // },
   //   {
   //     title: "Lifestyle",
   //     url: "/lifestyle",
@@ -154,7 +153,7 @@ const Headers = () => {
   const [visibleNav, setVisibleNav] = useState(false);
 
   const { pathname } = useLocation();
-  const isMobile = window.innerWidth <= 768;
+  // const isMobile = window.innerWidth <= 768;
 
   const handleOpenCalendly = () => {
     // Open Calendly widget
@@ -238,11 +237,11 @@ const Headers = () => {
           </div>
         </div>
 
-        {!isMobile && (
+        {/* {!isMobile && (
           <div style={{ marginRight: 20, marginTop: 15 }}>
             <Theme />
           </div>
-        )}
+        )} */}
 
         <Link
           className={cn("button button-small", styles.button)}

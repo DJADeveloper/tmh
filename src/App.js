@@ -33,6 +33,13 @@ import MobibleDevelopmentService from "./screens/Services/SoftwareDevelopment/Mo
 import { useEffect, useState } from "react";
 import ScrollButton from "./components/ScrollButton";
 import MetaPixel from "./components/MetaPixel/Index";
+import SeoAIBlog from "./screens/Article/Post/SeoAIBlog";
+import DigitalTransformation from "./screens/Article/Post/DigitalTransformation";
+import AIInnovation from "./screens/Article/Post/AIInnovations";
+import QuantumComputingBreakthroughs from "./screens/Article/Post/QuantumComputing";
+import AugmentedRealityTrends from "./screens/Article/Post/ARTrends";
+import CybersecurityEssentials from "./screens/Article/Post/CyberSecurity";
+import SustainableTechInnovation from "./screens/Article/Post/SustainableTech";
 
 function App() {
   // Function to initialize Tawk.to
@@ -320,6 +327,63 @@ function App() {
           element={
             <Page>
               <EmailMarketingService service="email-marketing" />
+            </Page>
+          }
+        />
+        {/* Blog Routes */}
+        <Route
+          path="/article-seo-ai"
+          element={
+            <Page>
+              <SeoAIBlog />
+            </Page>
+          }
+        />
+        <Route
+          path="/article-digital-transformation"
+          element={
+            <Page>
+              <DigitalTransformation />
+            </Page>
+          }
+        />
+        <Route
+          path="/article-ai-innovation"
+          element={
+            <Page>
+              <AIInnovation />
+            </Page>
+          }
+        />
+        <Route
+          path="/article-quantum-computing"
+          element={
+            <Page>
+              <QuantumComputingBreakthroughs />
+            </Page>
+          }
+        />
+        <Route
+          path="/article-ar-trends"
+          element={
+            <Page>
+              <AugmentedRealityTrends />
+            </Page>
+          }
+        />
+        <Route
+          path="/article-cyber-security-essentials"
+          element={
+            <Page>
+              <CybersecurityEssentials />
+            </Page>
+          }
+        />
+        <Route
+          path="/article-sustainable-tech"
+          element={
+            <Page>
+              <SustainableTechInnovation />
             </Page>
           }
         />

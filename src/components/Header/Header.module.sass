@@ -129,9 +129,11 @@
 
 .nav
     display: flex
-    align-items: center
-    margin-right: 20px
-    margin-top: 10px
+    align-items: flex-start
+    justify-content: flex-start
+    
+
+    padding-bottom: 50px
     +d
         flex-direction: column
         align-items: flex-start
@@ -151,8 +153,9 @@
 .link,
 .group,
 .nav > div
+    margin-top: 50px
     &:not(:last-child)
-        margin-right: 0px
+        margin-top: 50px
         +x
             margin-right: 24px
         +d
@@ -162,7 +165,7 @@
 
 .link
     display: block
-    padding: 16px 8px
+    padding: 0px 22px
     +button-2
     color: $neutrals4
     transition: color .2s

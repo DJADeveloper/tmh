@@ -1,7 +1,6 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Post.module.sass";
-import Icon from "../../../components/Icon";
 
 const DecodingSuccessBlog = () => {
   return (
@@ -91,4 +90,4 @@ const DecodingSuccessBlog = () => {
   );
 };
 
-export default Post;
+export default DecodingSuccessBlog;
