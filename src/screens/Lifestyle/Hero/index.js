@@ -116,10 +116,11 @@ const Hero = () => {
   return (
     <div className={cn("section", styles.section)}>
       <div className={cn("container", styles.container)}>
-        <h2 className={cn("hero", styles.title)}>Lifestyle</h2>
+        <h2 className={cn("hero", styles.title)}>Digital Trends</h2>
         <div className={styles.info}>
-          Track your workouts, get better results, and be the best version of
-          you. Less thinking, more lifting.
+          Exploring the Intersection of Technology, Creativity, and Business
+          Growth - Unveiling Innovations and Strategies for the Digital Age with
+          The Mastery House
         </div>
         <History />
         <div className={styles.nav}>

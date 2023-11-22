@@ -28,25 +28,46 @@ const SustainableTechInnovation = () => {
           <div className={styles.col}>
             <div className={styles.content}>
               <p>
-                As the clarion call for environmental stewardship grows louder,
-                sustainable technology is emerging as the cornerstone of
-                conscientious innovation. This domain isn't just about reducing
-                carbon footprints; it’s about pioneering a path where technology
-                harmonizes with ecology.
+                The year 2023 marks a pivotal moment in the realm of technology,
+                where green innovation is not just a trend but a necessity. As
+                the world grapples with climate change, sustainable technology
+                is emerging as the beacon of hope.
               </p>
               <p>
-                This piece delves into the strides made in sustainable tech,
-                spotlighting renewable energy solutions, eco-friendly
-                infrastructure, and the algorithms driving efficiency without
-                sacrificing performance. We’re witnessing an era where tech
-                giants and startups alike are investing in green technologies,
-                not just as a corporate responsibility, but as a fundamental
-                business imperative.
+                This revolution is characterized by a surge in renewable energy
+                solutions, like solar panels and wind turbines, that are
+                becoming more efficient and affordable. These technologies are
+                essential in reducing our carbon footprint and fostering a
+                sustainable future.
               </p>
               <p>
-                Explore with us the confluence of technology and sustainability,
-                where the latest trends are not only ecologically sound but are
-                paving the way for a greener, more sustainable future.
+                In the automotive sector, electric vehicles (EVs) are at the
+                forefront of this change. With advancements in battery
+                technology, EVs are becoming more accessible, signaling a
+                significant shift away from fossil fuel dependence.
+              </p>
+              <p>
+                Green innovation is also evident in everyday gadgets. From
+                energy-saving smart home devices to biodegradable electronics,
+                technology is being reimagined with sustainability at its core.
+              </p>
+              <p>
+                Beyond individual gadgets, the tech industry is also witnessing
+                a shift in its overall approach. Companies are increasingly
+                adopting circular economy principles, focusing on sustainability
+                in manufacturing processes and product lifecycles.
+              </p>
+              <p>
+                The sustainable tech revolution is not just about creating
+                greener products; it's about transforming our mindset. It
+                encourages a holistic view of technology, where environmental
+                impact is as crucial as functionality and design.
+              </p>
+              <p>
+                As we journey further into 2023, green innovation continues to
+                inspire and challenge us. It propels us towards a future where
+                technology and sustainability are inextricably linked, driving
+                positive change for our planet and generations to come.
               </p>
             </div>
           </div>

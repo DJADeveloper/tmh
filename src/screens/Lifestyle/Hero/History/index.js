@@ -6,7 +6,7 @@ import styles from "./History.module.sass";
 
 const items = [
   {
-    url: "/article-tmh-story",
+    url: "/the-mastery-house-story",
     title: "The Story Behind The Mastery House",
     content:
       "  How a group of passionate tech enthusiasts, that excel in Software Development, AI, Blockchain, and Digital Marketing formed a collective to bring businesses digital solutions.",

@@ -40,6 +40,7 @@ import QuantumComputingBreakthroughs from "./screens/Article/Post/QuantumComputi
 import AugmentedRealityTrends from "./screens/Article/Post/ARTrends";
 import CybersecurityEssentials from "./screens/Article/Post/CyberSecurity";
 import SustainableTechInnovation from "./screens/Article/Post/SustainableTech";
+import TheMasteryHouseStory from "./screens/Article/Post/TheMasteryHouseStory";
 
 function App() {
   // Function to initialize Tawk.to
@@ -384,6 +385,14 @@ function App() {
           element={
             <Page>
               <SustainableTechInnovation />
+            </Page>
+          }
+        />
+        <Route
+          path="/the-mastery-house-story"
+          element={
+            <Page>
+              <TheMasteryHouseStory />
             </Page>
           }
         />
