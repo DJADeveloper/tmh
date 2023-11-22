@@ -95,49 +95,64 @@
   </head>
   <body>
     <script>
-      // Insert this script in your index.html right after the <body> tag.
-      // This will help to set light mode as the default.
-
       (function () {
-        var storageKey = "darkMode";
-        var classNameDark = "dark-mode";
         var classNameLight = "light-mode";
 
-        function setClassOnDocumentBody(darkMode) {
-          document.body.classList.add(
-            darkMode ? classNameDark : classNameLight
-          );
-          document.body.classList.remove(
-            darkMode ? classNameLight : classNameDark
-          );
-        }
+        // Set light mode class on document body
+        document.body.classList.add(classNameLight);
 
-        var preferDarkQuery = "(prefers-color-scheme: dark)";
-        var mql = window.matchMedia(preferDarkQuery);
-        var supportsColorSchemeQuery = mql.media === preferDarkQuery;
-        var localStorageTheme = null;
+        // Store the preference in localStorage for consistency
+        var storageKey = "darkMode";
         try {
-          localStorageTheme = localStorage.getItem(storageKey);
-        } catch (err) {}
-        var localStorageExists = localStorageTheme !== null;
-        if (localStorageExists) {
-          localStorageTheme = JSON.parse(localStorageTheme);
-        }
-
-        // Determine the source of truth
-        if (localStorageExists) {
-          // source of truth from localStorage
-          setClassOnDocumentBody(localStorageTheme);
-        } else if (supportsColorSchemeQuery) {
-          // If the system preference is dark mode, respect it, otherwise, set light mode
-          setClassOnDocumentBody(mql.matches);
-          localStorage.setItem(storageKey, mql.matches);
-        } else {
-          // Default to light mode
-          setClassOnDocumentBody(false);
           localStorage.setItem(storageKey, false);
+        } catch (err) {
+          console.error("Could not set localStorage:", err);
         }
       })();
+            // Insert this script in your index.html right after the <body> tag.
+            // This will help to set light mode as the default.
+      //Old Theme light & dark
+            /*(function () {*/
+
+              var storageKey = "darkMode";
+              var classNameDark = "dark-mode";
+              var classNameLight = "light-mode";
+
+              function setClassOnDocumentBody(darkMode) {
+                document.body.classList.add(
+                  darkMode ? classNameDark : classNameLight
+                );
+                document.body.classList.remove(
+                  darkMode ? classNameLight : classNameDark
+                );
+              }
+
+              var preferDarkQuery = "(prefers-color-scheme: dark)";
+              var mql = window.matchMedia(preferDarkQuery);
+              var supportsColorSchemeQuery = mql.media === preferDarkQuery;
+              var localStorageTheme = null;
+              try {
+                localStorageTheme = localStorage.getItem(storageKey);
+              } catch (err) {}
+              var localStorageExists = localStorageTheme !== null;
+              if (localStorageExists) {
+                localStorageTheme = JSON.parse(localStorageTheme);
+              }
+
+              // Determine the source of truth
+              if (localStorageExists) {
+                // source of truth from localStorage
+                setClassOnDocumentBody(localStorageTheme);
+              } else if (supportsColorSchemeQuery) {
+                // If the system preference is dark mode, respect it, otherwise, set light mode
+                setClassOnDocumentBody(mql.matches);
+                localStorage.setItem(storageKey, mql.matches);
+              } else {
+                // Default to light mode
+                setClassOnDocumentBody(false);
+                localStorage.setItem(storageKey, false);
+              }
+            })();
     </script>
 
     <div id="root"></div>
