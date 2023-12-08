@@ -163,7 +163,7 @@ function App() {
           }
         />
         <Route
-          path="/lifestyle"
+          path="/digital-trends"
           element={
             <Page>
               <Lifestyle />

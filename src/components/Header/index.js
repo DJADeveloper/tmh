@@ -114,7 +114,7 @@ const navLinks = [
   // },
   {
     title: "Blog",
-    url: "/lifestyle",
+    url: "/digital-trends",
   },
   // {
   //   title: "Contact",
