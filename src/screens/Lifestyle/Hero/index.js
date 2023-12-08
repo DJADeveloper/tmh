@@ -12,7 +12,7 @@ const items = [
       {
         url: "/article-ai-innovation",
         title: "The Rise of AI: Transforming Business in 2023",
-        avatar: "/images/content/avatar-5.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "Sept 15, 2023",
         image: "/images/content/blog/ai-innovation.png",
@@ -24,7 +24,7 @@ const items = [
         url: "/article-seo-ai",
         title:
           "SEO in the Age of AI: Navigating New Horizons in Search Engine Optimization",
-        avatar: "/images/content/avatar-2.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "Nov 08, 2023",
         image: "/images/content/blog/seo-ai.png",
@@ -40,7 +40,7 @@ const items = [
       {
         url: "/article-digital-transformation",
         title: "Decoding the Success DNA: The Digital Landscape in 2023",
-        avatar: "/images/content/avatar-5.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "May 14, 2023",
         image: "/images/content/blog/digital-transformation.png",
@@ -56,7 +56,7 @@ const items = [
       {
         url: "/article-quantum-computing",
         title: "Quantum Computing: The Next Frontier in 2023",
-        avatar: "/images/content/avatar-5.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "Oct 28, 2023",
         image: "/images/content/blog/quantum-computing.png",
@@ -67,7 +67,7 @@ const items = [
       {
         url: "/article-ar-trends",
         title: "Augmented Reality: Merging Digital and Physical Realms",
-        avatar: "/images/content/avatar-5.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "Nov 02, 2023",
         image: "/images/content/blog/ar-trends.png",
@@ -83,7 +83,7 @@ const items = [
       {
         url: "/article-cyber-security",
         title: "Cybersecurity: Fortifying the Digital Frontier",
-        avatar: "/images/content/avatar-5.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "Nov 02, 2023",
         image: "/images/content/blog/cyber-security.png",
@@ -99,7 +99,7 @@ const items = [
       {
         url: "/article-sustainable-tech",
         title: "Harnessing Green Innovation: The Sustainable Tech Revolution",
-        avatar: "/images/content/avatar-5.png",
+        avatar: "/images/content/avatar-1.png",
         author: "Darryl Adams",
         date: "Nov 02, 2023",
         image: "/images/content/blog/sustainable-tech.png",

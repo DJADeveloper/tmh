@@ -108,10 +108,10 @@ const navLinks = [
     //   ],
     // },
   },
-  {
-    title: "Work",
-    url: "/work",
-  },
+  // {
+  //   title: "Work",
+  //   url: "/work",
+  // },
   {
     title: "Blog",
     url: "/lifestyle",

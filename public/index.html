@@ -3,29 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <title>The Mastery House</title>
-    <meta
-      content="Premium Web UI Kit for Fitness Experience"
-      name="description"
-    />
+    <meta content="Describe your agency's services here" name="description" />
     <meta content="The Mastery House" property="og:title" />
-    <meta content="The Mastery House " property="og:description" />
+    <meta
+      content="Describe your agency's services here"
+      property="og:description"
+    />
     <meta content="%PUBLIC_URL%/fb-og-image.png" property="og:image" />
-    <!-- <meta
-      property="og:url"
-      content="https://ui8.net/ui8/products/fitness-pro-website-ui-kit"
-    /> -->
     <meta property="og:site_name" content="The Mastery House" />
     <meta content="The Mastery House" property="twitter:title" />
     <meta
-      content="Premium Web UI Kit for Fitness Experience"
+      content="Describe your agency's services here"
       property="twitter:description"
     />
     <meta content="%PUBLIC_URL%/twitter-card.png" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary" name="twitter:card" />
-    <meta name="twitter:site" content="@ui8" />
-    <meta name="twitter:creator" content="@ui8" />
-    <meta property="fb:admins" content="132951670226590" />
+    <!-- Update these if you have a twitter account -->
+    <meta name="twitter:site" content="@your_twitter_account" />
+    <meta name="twitter:creator" content="@your_twitter_account" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -51,7 +47,6 @@
       href="https://assets.calendly.com/assets/external/widget.css"
       rel="stylesheet"
     />
-
     <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
@@ -60,8 +55,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-CMKGJ2WB0B"
@@ -72,10 +65,8 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-CMKGJ2WB0B");
     </script>
-
     <style>
       @font-face {
         font-family: "SFProDisplay-Bold";
@@ -83,76 +74,11 @@
           url("/fonts/SFProDisplay-Bold.woff") format("woff");
       }
     </style>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
   </head>
   <body>
     <script>
-      (function () {
-        var classNameLight = "light-mode";
-
-        // Set light mode class on document body
-        document.body.classList.add(classNameLight);
-
-        // Store the preference in localStorage for consistency
-        var storageKey = "darkMode";
-        try {
-          localStorage.setItem(storageKey, false);
-        } catch (err) {
-          console.error("Could not set localStorage:", err);
-        }
-      })();
-            // Insert this script in your index.html right after the <body> tag.
-            // This will help to set light mode as the default.
-      //Old Theme light & dark
-            /*(function () {*/
-
-              var storageKey = "darkMode";
-              var classNameDark = "dark-mode";
-              var classNameLight = "light-mode";
-
-              function setClassOnDocumentBody(darkMode) {
-                document.body.classList.add(
-                  darkMode ? classNameDark : classNameLight
-                );
-                document.body.classList.remove(
-                  darkMode ? classNameLight : classNameDark
-                );
-              }
-
-              var preferDarkQuery = "(prefers-color-scheme: dark)";
-              var mql = window.matchMedia(preferDarkQuery);
-              var supportsColorSchemeQuery = mql.media === preferDarkQuery;
-              var localStorageTheme = null;
-              try {
-                localStorageTheme = localStorage.getItem(storageKey);
-              } catch (err) {}
-              var localStorageExists = localStorageTheme !== null;
-              if (localStorageExists) {
-                localStorageTheme = JSON.parse(localStorageTheme);
-              }
-
-              // Determine the source of truth
-              if (localStorageExists) {
-                // source of truth from localStorage
-                setClassOnDocumentBody(localStorageTheme);
-              } else if (supportsColorSchemeQuery) {
-                // If the system preference is dark mode, respect it, otherwise, set light mode
-                setClassOnDocumentBody(mql.matches);
-                localStorage.setItem(storageKey, mql.matches);
-              } else {
-                // Default to light mode
-                setClassOnDocumentBody(false);
-                localStorage.setItem(storageKey, false);
-              }
-            })();
+      // Set light mode class on document body
+      document.body.classList.add("light-mode");
     </script>
 
     <div id="root"></div>
